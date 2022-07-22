@@ -1,0 +1,3003 @@
+﻿=====Emblem Bulbasaur=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Green 
+Grade: Bronze 🥉
+Effect Pokemon: HP -30
+Sp. Attack +1.5
+
+----
+Color: Green 
+Grade: Sliver 🥈
+Effect Pokemon: HP -40
+Sp. Attack +2.5
+
+----
+Color: Green 
+Grade: Gold 🥇
+Effect Pokemon: HP -50
+Sp. Attack +3.0
+
+
+=====Emblem Ivysaur=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Green 
+Grade: Bronze 🥉
+Effect Pokemon: Defense -3.0
+Sp. Attack +1.5
+
+----
+Color: Green 
+Grade: Sliver 🥈
+Effect Pokemon: Defense -4.0
+Sp. Attack +2.5
+
+----
+Color: Green 
+Grade: Gold 🥇
+Effect Pokemon: Defense -5.0
+Sp. Attack +3.0
+
+
+=====Emblem Venusaur=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Green 
+Grade: Bronze 🥉
+Effect Pokemon: Attack -1.0
+Sp. Attack +1.5
+
+----
+Color: Green 
+Grade: Sliver 🥈
+Effect Pokemon: Attack -1.5
+Sp. Attack +2.5
+
+----
+Color: Green 
+Grade: Gold 🥇
+Effect Pokemon: Attack -2.0
+Sp. Attack +3.0
+
+
+=====Emblem Charmander=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Red 
+Grade: Bronze 🥉
+Effect Pokemon: HP +30
+Attack -1.0
+
+----
+Color: Red 
+Grade: Sliver 🥈
+Effect Pokemon: HP +40
+Attack -1.5
+
+----
+Color: Red 
+Grade: Gold 🥇
+Effect Pokemon: HP +50
+Attack -2.0
+
+
+=====Emblem Charmeleon=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Red 
+Grade: Bronze 🥉
+Effect Pokemon: HP +30
+Sp. Defense -3.0
+
+----
+Color: Red 
+Grade: Sliver 🥈
+Effect Pokemon: HP +40
+Sp. Defense -4.0
+
+----
+Color: Red 
+Grade: Gold 🥇
+Effect Pokemon: HP +50
+Sp. Defense -5.0
+
+
+=====Emblem Charizard=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Red 
+Grade: Bronze 🥉
+Effect Pokemon: HP +30
+Defense -3.0
+
+----
+Color: Red 
+Grade: Sliver 🥈
+Effect Pokemon: HP +40
+Defense -4.0
+
+----
+Color: Red 
+Grade: Gold 🥇
+Effect Pokemon: HP +50
+Defense -5.0
+
+
+=====Emblem Squirtle=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Blue 
+Grade: Bronze 🥉
+Effect Pokemon: HP -30
+Sp. Attack +1.5
+
+----
+Color: Blue 
+Grade: Sliver 🥈
+Effect Pokemon: HP -40
+Sp. Attack +2.5
+
+----
+Color: Blue 
+Grade: Gold 🥇
+Effect Pokemon: HP -50
+Sp. Attack +3.0
+
+
+=====Emblem Wartortle=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Blue 
+Grade: Bronze 🥉
+Effect Pokemon: Defense -3.0
+Sp. Attack +1.5
+
+----
+Color: Blue 
+Grade: Sliver 🥈
+Effect Pokemon: Defense -4.0
+Sp. Attack +2.5
+
+----
+Color: Blue 
+Grade: Gold 🥇
+Effect Pokemon: Defense -5.0
+Sp. Attack +3.0
+
+
+=====Emblem Blastoise=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Blue 
+Grade: Bronze 🥉
+Effect Pokemon: Sp. Attack +1.5
+Critical-Hit Rate -0.6%
+
+----
+Color: Blue 
+Grade: Sliver 🥈
+Effect Pokemon: Sp. Attack +2.5
+Critical-Hit Rate -0.8%
+
+----
+Color: Blue 
+Grade: Gold 🥇
+Effect Pokemon: Sp. Attack +3.0
+Critical-Hit Rate -1.0%
+
+
+=====Emblem Caterpie=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Green 
+Grade: Bronze 🥉
+Effect Pokemon: HP -30
+Defense +3
+
+----
+Color: Green 
+Grade: Sliver 🥈
+Effect Pokemon: HP -40
+Defense +4
+
+----
+Color: Green 
+Grade: Gold 🥇
+Effect Pokemon: HP -50
+Defense +5
+
+
+=====Emblem Metapod=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Green 
+Grade: Bronze 🥉
+Effect Pokemon: Defense +3
+Speed -21
+
+----
+Color: Green 
+Grade: Sliver 🥈
+Effect Pokemon: Defense +4
+Speed -28
+
+----
+Color: Green 
+Grade: Gold 🥇
+Effect Pokemon: Defense +5
+Speed -35
+
+
+=====Emblem Butterfree=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Green 
+White 
+Grade: Bronze 🥉
+Effect Pokemon: Attack -1.0
+Defense +3
+
+----
+Color: Green 
+White 
+Grade: Sliver 🥈
+Effect Pokemon: Attack -1.5
+Defense +4
+
+----
+Color: Green 
+White 
+Grade: Gold 🥇
+Effect Pokemon: Attack -2.0
+Defense +5
+
+
+=====Emblem Weedle=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Green 
+Grade: Bronze 🥉
+Effect Pokemon: Defense -3.0
+Sp. Defense +3.0
+
+----
+Color: Green 
+Grade: Sliver 🥈
+Effect Pokemon: Defense -4.0
+Sp. Defense +4.0
+
+----
+Color: Green 
+Grade: Gold 🥇
+Effect Pokemon: Defense -5.0
+Sp. Defense +5.0
+
+
+=====Emblem Kakuna=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Green 
+Grade: Bronze 🥉
+Effect Pokemon: Sp. Defense +3.0
+Speed -21
+
+----
+Color: Green 
+Grade: Sliver 🥈
+Effect Pokemon: Sp. Defense +4.0
+Speed -28
+
+----
+Color: Green 
+Grade: Gold 🥇
+Effect Pokemon: Sp. Defense +5.0
+Speed -35
+
+
+=====Emblem Beedrill=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Green 
+Black 
+Grade: Bronze 🥉
+Effect Pokemon: HP -30
+Sp. Defense +3.0
+
+----
+Color: Green 
+Black 
+Grade: Sliver 🥈
+Effect Pokemon: HP -40
+Sp. Defense +4.0
+
+----
+Color: Green 
+Black 
+Grade: Gold 🥇
+Effect Pokemon: HP -50
+Sp. Defense +5.0
+
+
+=====Emblem Pidgey=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: White 
+Grade: Bronze 🥉
+Effect Pokemon: HP +30
+Defense -3.0
+
+----
+Color: White 
+Grade: Sliver 🥈
+Effect Pokemon: HP +40
+Defense -4.0
+
+----
+Color: White 
+Grade: Gold 🥇
+Effect Pokemon: HP +50
+Defense -5.0
+
+
+=====Emblem Pidgeotto=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: White 
+Grade: Bronze 🥉
+Effect Pokemon: HP +30
+Sp. Defense -3.0
+
+----
+Color: White 
+Grade: Sliver 🥈
+Effect Pokemon: HP +40
+Sp. Defense -4.0
+
+----
+Color: White 
+Grade: Gold 🥇
+Effect Pokemon: HP +50
+Sp. Defense -5.0
+
+
+=====Emblem Pidgeot=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: White 
+Grade: Bronze 🥉
+Effect Pokemon: HP +30
+Sp. Attack -1.5
+
+----
+Color: White 
+Grade: Sliver 🥈
+Effect Pokemon: HP +40
+Sp. Attack -2.5
+
+----
+Color: White 
+Grade: Gold 🥇
+Effect Pokemon: HP +50
+Sp. Attack -3.0
+
+
+=====Emblem Rattata=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: White 
+Grade: Bronze 🥉
+Effect Pokemon: HP -30
+Defense +3
+
+----
+Color: White 
+Grade: Sliver 🥈
+Effect Pokemon: HP -40
+Defense +4
+
+----
+Color: White 
+Grade: Gold 🥇
+Effect Pokemon: HP -50
+Defense +5
+
+
+=====Emblem Raticate=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: White 
+Grade: Bronze 🥉
+Effect Pokemon: Defense +3
+Sp. Attack -1.5
+
+----
+Color: White 
+Grade: Sliver 🥈
+Effect Pokemon: Defense +4
+Sp. Attack -2.5
+
+----
+Color: White 
+Grade: Gold 🥇
+Effect Pokemon: Defense +5
+Sp. Attack -3.0
+
+
+=====Emblem Spearow=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: White 
+Grade: Bronze 🥉
+Effect Pokemon: Attack +1.0
+Sp. Defense -3.0
+
+----
+Color: White 
+Grade: Sliver 🥈
+Effect Pokemon: Attack +1.5
+Sp. Defense -4.0
+
+----
+Color: White 
+Grade: Gold 🥇
+Effect Pokemon: Attack +2.0
+Sp. Defense -5.0
+
+
+=====Emblem Fearow=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: White 
+Grade: Bronze 🥉
+Effect Pokemon: Attack +1.0
+Sp. Attack -1.5
+
+----
+Color: White 
+Grade: Sliver 🥈
+Effect Pokemon: Attack +1.5
+Sp. Attack -2.5
+
+----
+Color: White 
+Grade: Gold 🥇
+Effect Pokemon: Attack +2.0
+Sp. Attack -3.0
+
+
+=====Emblem Ekans=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Black 
+Grade: Bronze 🥉
+Effect Pokemon: Attack +1.0
+Defense -3.0
+
+----
+Color: Black 
+Grade: Sliver 🥈
+Effect Pokemon: Attack +1.5
+Defense -4.0
+
+----
+Color: Black 
+Grade: Gold 🥇
+Effect Pokemon: Attack +2.0
+Defense -5.0
+
+
+=====Emblem Arbok=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Black 
+Grade: Bronze 🥉
+Effect Pokemon: Attack +1.0
+Sp. Defense -3.0
+
+----
+Color: Black 
+Grade: Sliver 🥈
+Effect Pokemon: Attack +1.5
+Sp. Defense -4.0
+
+----
+Color: Black 
+Grade: Gold 🥇
+Effect Pokemon: Attack +2.0
+Sp. Defense -5.0
+
+
+=====Emblem Pikachu=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Yellow 
+Grade: Bronze 🥉
+Effect Pokemon: Sp. Defense +3.0
+Critical-Hit Rate -0.6%
+
+----
+Color: Yellow 
+Grade: Sliver 🥈
+Effect Pokemon: Sp. Defense +4.0
+Critical-Hit Rate -0.8%
+
+----
+Color: Yellow 
+Grade: Gold 🥇
+Effect Pokemon: Sp. Defense +5.0
+Critical-Hit Rate -1.0%
+
+
+=====Emblem Raichu=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Yellow 
+Grade: Bronze 🥉
+Effect Pokemon: HP -30
+Sp. Defense +3.0
+
+----
+Color: Yellow 
+Grade: Sliver 🥈
+Effect Pokemon: HP -40
+Sp. Defense +4.0
+
+----
+Color: Yellow 
+Grade: Gold 🥇
+Effect Pokemon: HP -50
+Sp. Defense +5.0
+
+
+=====Emblem Sandshrew=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Orange 
+Grade: Bronze 🥉
+Effect Pokemon: Sp. Defense -3.0
+Critical-Hit Rate +0.6%
+
+----
+Color: Orange 
+Grade: Sliver 🥈
+Effect Pokemon: Sp. Defense -4.0
+Critical-Hit Rate +0.8%
+
+----
+Color: Orange 
+Grade: Gold 🥇
+Effect Pokemon: Sp. Defense -5.0
+Critical-Hit Rate +1.0%
+
+
+=====Emblem Sandslash=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Orange 
+Grade: Bronze 🥉
+Effect Pokemon: Sp. Attack -1.5
+Critical-Hit Rate +0.6%
+
+----
+Color: Orange 
+Grade: Sliver 🥈
+Effect Pokemon: Sp. Attack -2.5
+Critical-Hit Rate +0.8%
+
+----
+Color: Orange 
+Grade: Gold 🥇
+Effect Pokemon: Sp. Attack -3.0
+Critical-Hit Rate +1.0%
+
+
+=====Emblem Nidoran♀=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Purple 
+Grade: Bronze 🥉
+Effect Pokemon: HP +30
+Sp. Defense -3.0
+
+----
+Color: Purple 
+Grade: Sliver 🥈
+Effect Pokemon: HP +40
+Sp. Defense -4.0
+
+----
+Color: Purple 
+Grade: Gold 🥇
+Effect Pokemon: HP +50
+Sp. Defense -5.0
+
+
+=====Emblem Nidorina=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Purple 
+Grade: Bronze 🥉
+Effect Pokemon: HP +30
+Defense -3.0
+
+----
+Color: Purple 
+Grade: Sliver 🥈
+Effect Pokemon: HP +40
+Defense -4.0
+
+----
+Color: Purple 
+Grade: Gold 🥇
+Effect Pokemon: HP +50
+Defense -5.0
+
+
+=====Emblem Nidoqueen=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Purple 
+Orange 
+Grade: Bronze 🥉
+Effect Pokemon: HP +30
+Sp. Attack -1.5
+
+----
+Color: Purple 
+Orange 
+Grade: Sliver 🥈
+Effect Pokemon: HP +40
+Sp. Attack -2.5
+
+----
+Color: Purple 
+Orange 
+Grade: Gold 🥇
+Effect Pokemon: HP +50
+Sp. Attack -3.0
+
+
+=====Emblem Nidoran♂=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Purple 
+Grade: Bronze 🥉
+Effect Pokemon: HP -30
+Attack +1.0
+
+----
+Color: Purple 
+Grade: Sliver 🥈
+Effect Pokemon: HP -40
+Attack +1.5
+
+----
+Color: Purple 
+Grade: Gold 🥇
+Effect Pokemon: HP -50
+Attack +2.0
+
+
+=====Emblem Nidorino=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Purple 
+Grade: Bronze 🥉
+Effect Pokemon: Attack +1.0
+Sp. Defense -3.0
+
+----
+Color: Purple 
+Grade: Sliver 🥈
+Effect Pokemon: Attack +1.5
+Sp. Defense -4.0
+
+----
+Color: Purple 
+Grade: Gold 🥇
+Effect Pokemon: Attack +2.0
+Sp. Defense -5.0
+
+
+=====Emblem Nidoking=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Purple 
+Orange 
+Grade: Bronze 🥉
+Effect Pokemon: Attack +1.0
+Defense -3.0
+
+----
+Color: Purple 
+Orange 
+Grade: Sliver 🥈
+Effect Pokemon: Attack +1.5
+Defense -4.0
+
+----
+Color: Purple 
+Orange 
+Grade: Gold 🥇
+Effect Pokemon: Attack +2.0
+Defense -5.0
+
+
+=====Emblem Clefairy=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Pink 
+Grade: Bronze 🥉
+Effect Pokemon: HP +30
+Defense -3.0
+
+----
+Color: Pink 
+Grade: Sliver 🥈
+Effect Pokemon: HP +40
+Defense -4.0
+
+----
+Color: Pink 
+Grade: Gold 🥇
+Effect Pokemon: HP +50
+Defense -5.0
+
+
+=====Emblem Clefable=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Pink 
+Grade: Bronze 🥉
+Effect Pokemon: HP +30
+Speed -21
+
+----
+Color: Pink 
+Grade: Sliver 🥈
+Effect Pokemon: HP +40
+Speed -28
+
+----
+Color: Pink 
+Grade: Gold 🥇
+Effect Pokemon: HP +50
+Speed -35
+
+
+=====Emblem Vulpix=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Red 
+Grade: Bronze 🥉
+Effect Pokemon: HP -30
+Sp. Defense +3.0
+
+----
+Color: Red 
+Grade: Sliver 🥈
+Effect Pokemon: HP -40
+Sp. Defense +4.0
+
+----
+Color: Red 
+Grade: Gold 🥇
+Effect Pokemon: HP -50
+Sp. Defense +5.0
+
+
+=====Emblem Ninetales=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Red 
+Grade: Bronze 🥉
+Effect Pokemon: Attack -1.0
+Sp. Defense +3.0
+
+----
+Color: Red 
+Grade: Sliver 🥈
+Effect Pokemon: Attack -1.5
+Sp. Defense +4.0
+
+----
+Color: Red 
+Grade: Gold 🥇
+Effect Pokemon: Attack -2.0
+Sp. Defense +5.0
+
+
+=====Emblem Jigglypuff=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Pink 
+Grade: Bronze 🥉
+Effect Pokemon: HP +30
+Sp. Defense -3.0
+
+----
+Color: Pink 
+Grade: Sliver 🥈
+Effect Pokemon: HP +40
+Sp. Defense -4.0
+
+----
+Color: Pink 
+Grade: Gold 🥇
+Effect Pokemon: HP +50
+Sp. Defense -5.0
+
+
+=====Emblem Wigglytuff=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Pink 
+Grade: Bronze 🥉
+Effect Pokemon: HP +30
+Speed -21
+
+----
+Color: Pink 
+Grade: Sliver 🥈
+Effect Pokemon: HP +40
+Speed -28
+
+----
+Color: Pink 
+Grade: Gold 🥇
+Effect Pokemon: HP +50
+Speed -35
+
+
+=====Emblem Zubat=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Black 
+Grade: Bronze 🥉
+Effect Pokemon: Attack -1.0
+Speed +21
+
+----
+Color: Black 
+Grade: Sliver 🥈
+Effect Pokemon: Attack -1.5
+Speed +28
+
+----
+Color: Black 
+Grade: Gold 🥇
+Effect Pokemon: Attack -2.0
+Speed +35
+
+
+=====Emblem Golbat=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Black 
+Grade: Bronze 🥉
+Effect Pokemon: Sp. Defense -3.0
+Speed +21
+
+----
+Color: Black 
+Grade: Sliver 🥈
+Effect Pokemon: Sp. Defense -4.0
+Speed +28
+
+----
+Color: Black 
+Grade: Gold 🥇
+Effect Pokemon: Sp. Defense -5.0
+Speed +35
+
+
+=====Emblem Oddish=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Green 
+Grade: Bronze 🥉
+Effect Pokemon: HP +30
+Speed -21
+
+----
+Color: Green 
+Grade: Sliver 🥈
+Effect Pokemon: HP +40
+Speed -28
+
+----
+Color: Green 
+Grade: Gold 🥇
+Effect Pokemon: HP +50
+Speed -35
+
+
+=====Emblem Gloom=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Green 
+Grade: Bronze 🥉
+Effect Pokemon: HP +30
+Defense -3.0
+
+----
+Color: Green 
+Grade: Sliver 🥈
+Effect Pokemon: HP +40
+Defense -4.0
+
+----
+Color: Green 
+Grade: Gold 🥇
+Effect Pokemon: HP +50
+Defense -5.0
+
+
+=====Emblem Vileplume=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Green 
+Black 
+Grade: Bronze 🥉
+Effect Pokemon: HP +30
+Attack -1.0
+
+----
+Color: Green 
+Black 
+Grade: Sliver 🥈
+Effect Pokemon: HP +40
+Attack -1.5
+
+----
+Color: Green 
+Black 
+Grade: Gold 🥇
+Effect Pokemon: HP +50
+Attack -2.0
+
+
+=====Emblem Paras=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Green 
+Grade: Bronze 🥉
+Effect Pokemon: Defense +3
+Critical-Hit Rate -0.6%
+
+----
+Color: Green 
+Grade: Sliver 🥈
+Effect Pokemon: Defense +4
+Critical-Hit Rate -0.8%
+
+----
+Color: Green 
+Grade: Gold 🥇
+Effect Pokemon: Defense +5
+Critical-Hit Rate -1.0%
+
+
+=====Emblem Parasect=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Green 
+Grade: Bronze 🥉
+Effect Pokemon: Defense +3
+Sp. Attack -1.5
+
+----
+Color: Green 
+Grade: Sliver 🥈
+Effect Pokemon: Defense +4
+Sp. Attack -2.5
+
+----
+Color: Green 
+Grade: Gold 🥇
+Effect Pokemon: Defense +5
+Sp. Attack -3.0
+
+
+=====Emblem Venonat=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Green 
+Grade: Bronze 🥉
+Effect Pokemon: HP +30
+Attack -1.0
+
+----
+Color: Green 
+Grade: Sliver 🥈
+Effect Pokemon: HP +40
+Attack -1.5
+
+----
+Color: Green 
+Grade: Gold 🥇
+Effect Pokemon: HP +50
+Attack -2.0
+
+
+=====Emblem Venomoth=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Green 
+Black 
+Grade: Bronze 🥉
+Effect Pokemon: HP +30
+Critical-Hit Rate -0.6%
+
+----
+Color: Green 
+Black 
+Grade: Sliver 🥈
+Effect Pokemon: HP +40
+Critical-Hit Rate -0.8%
+
+----
+Color: Green 
+Black 
+Grade: Gold 🥇
+Effect Pokemon: HP +50
+Critical-Hit Rate -1.0%
+
+
+=====Emblem Diglett=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Orange 
+Grade: Bronze 🥉
+Effect Pokemon: HP -30
+Speed +21
+
+----
+Color: Orange 
+Grade: Sliver 🥈
+Effect Pokemon: HP -40
+Speed +28
+
+----
+Color: Orange 
+Grade: Gold 🥇
+Effect Pokemon: HP -50
+Speed +35
+
+
+=====Emblem Dugtrio=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Orange 
+Grade: Bronze 🥉
+Effect Pokemon: Defense -3.0
+Speed +21
+
+----
+Color: Orange 
+Grade: Sliver 🥈
+Effect Pokemon: Defense -4.0
+Speed +28
+
+----
+Color: Orange 
+Grade: Gold 🥇
+Effect Pokemon: Defense -5.0
+Speed +35
+
+
+=====Emblem Meowth=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: White 
+Grade: Bronze 🥉
+Effect Pokemon: Defense -3.0
+Critical-Hit Rate +0.6%
+
+----
+Color: White 
+Grade: Sliver 🥈
+Effect Pokemon: Defense -4.0
+Critical-Hit Rate +0.8%
+
+----
+Color: White 
+Grade: Gold 🥇
+Effect Pokemon: Defense -5.0
+Critical-Hit Rate +1.0%
+
+
+=====Emblem Persian=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: White 
+Grade: Bronze 🥉
+Effect Pokemon: Defense -3.0
+Critical-Hit Rate +0.6%
+
+----
+Color: White 
+Grade: Sliver 🥈
+Effect Pokemon: Defense -4.0
+Critical-Hit Rate +0.8%
+
+----
+Color: White 
+Grade: Gold 🥇
+Effect Pokemon: Defense -5.0
+Critical-Hit Rate +1.0%
+
+
+=====Emblem Psyduck=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Blue 
+Grade: Bronze 🥉
+Effect Pokemon: HP -30
+Sp. Defense +3.0
+
+----
+Color: Blue 
+Grade: Sliver 🥈
+Effect Pokemon: HP -40
+Sp. Defense +4.0
+
+----
+Color: Blue 
+Grade: Gold 🥇
+Effect Pokemon: HP -50
+Sp. Defense +5.0
+
+
+=====Emblem Golduck=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Blue 
+Grade: Bronze 🥉
+Effect Pokemon: Attack -1.0
+Sp. Defense +3.0
+
+----
+Color: Blue 
+Grade: Sliver 🥈
+Effect Pokemon: Attack -1.5
+Sp. Defense +4.0
+
+----
+Color: Blue 
+Grade: Gold 🥇
+Effect Pokemon: Attack -2.0
+Sp. Defense +5.0
+
+
+=====Emblem Mankey=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Orange 
+Grade: Bronze 🥉
+Effect Pokemon: HP +30
+Defense -3.0
+
+----
+Color: Orange 
+Grade: Sliver 🥈
+Effect Pokemon: HP +40
+Defense -4.0
+
+----
+Color: Orange 
+Grade: Gold 🥇
+Effect Pokemon: HP +50
+Defense -5.0
+
+
+=====Emblem Primeape=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Orange 
+Grade: Bronze 🥉
+Effect Pokemon: HP +30
+Sp. Attack -1.5
+
+----
+Color: Orange 
+Grade: Sliver 🥈
+Effect Pokemon: HP +40
+Sp. Attack -2.5
+
+----
+Color: Orange 
+Grade: Gold 🥇
+Effect Pokemon: HP +50
+Sp. Attack -3.0
+
+
+=====Emblem Growlithe=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Red 
+Grade: Bronze 🥉
+Effect Pokemon: Sp. Attack +1.5
+Sp. Defense -3.0
+
+----
+Color: Red 
+Grade: Sliver 🥈
+Effect Pokemon: Sp. Attack +2.5
+Sp. Defense -4.0
+
+----
+Color: Red 
+Grade: Gold 🥇
+Effect Pokemon: Sp. Attack +3.0
+Sp. Defense -5.0
+
+
+=====Emblem Arcanine=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Red 
+Grade: Bronze 🥉
+Effect Pokemon: Attack -1.0
+Sp. Attack +1.5
+
+----
+Color: Red 
+Grade: Sliver 🥈
+Effect Pokemon: Attack -1.5
+Sp. Attack +2.5
+
+----
+Color: Red 
+Grade: Gold 🥇
+Effect Pokemon: Attack -2.0
+Sp. Attack +3.0
+
+
+=====Emblem Poliwag=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Blue 
+Grade: Bronze 🥉
+Effect Pokemon: Defense -3.0
+Sp. Defense +3.0
+
+----
+Color: Blue 
+Grade: Sliver 🥈
+Effect Pokemon: Defense -4.0
+Sp. Defense +4.0
+
+----
+Color: Blue 
+Grade: Gold 🥇
+Effect Pokemon: Defense -5.0
+Sp. Defense +5.0
+
+
+=====Emblem Poliwhirl=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Blue 
+Grade: Bronze 🥉
+Effect Pokemon: HP -30
+Sp. Defense +3.0
+
+----
+Color: Blue 
+Grade: Sliver 🥈
+Effect Pokemon: HP -40
+Sp. Defense +4.0
+
+----
+Color: Blue 
+Grade: Gold 🥇
+Effect Pokemon: HP -50
+Sp. Defense +5.0
+
+
+=====Emblem Poliwrath=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Blue 
+Orange 
+Grade: Bronze 🥉
+Effect Pokemon: Sp. Attack -1.5
+Sp. Defense +3.0
+
+----
+Color: Blue 
+Orange 
+Grade: Sliver 🥈
+Effect Pokemon: Sp. Attack -2.5
+Sp. Defense +4.0
+
+----
+Color: Blue 
+Orange 
+Grade: Gold 🥇
+Effect Pokemon: Sp. Attack -3.0
+Sp. Defense +5.0
+
+
+=====Emblem Abra=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Purple 
+Grade: Bronze 🥉
+Effect Pokemon: HP -30
+Sp. Attack +1.5
+
+----
+Color: Purple 
+Grade: Sliver 🥈
+Effect Pokemon: HP -40
+Sp. Attack +2.5
+
+----
+Color: Purple 
+Grade: Gold 🥇
+Effect Pokemon: HP -50
+Sp. Attack +3.0
+
+
+=====Emblem Kadabra=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Purple 
+Grade: Bronze 🥉
+Effect Pokemon: Sp. Attack +1.5
+Critical-Hit Rate -0.6%
+
+----
+Color: Purple 
+Grade: Sliver 🥈
+Effect Pokemon: Sp. Attack +2.5
+Critical-Hit Rate -0.8%
+
+----
+Color: Purple 
+Grade: Gold 🥇
+Effect Pokemon: Sp. Attack +3.0
+Critical-Hit Rate -1.0%
+
+
+=====Emblem Alakazam=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Purple 
+Grade: Bronze 🥉
+Effect Pokemon: Attack -1.0
+Sp. Attack +1.5
+
+----
+Color: Purple 
+Grade: Sliver 🥈
+Effect Pokemon: Attack -1.5
+Sp. Attack +2.5
+
+----
+Color: Purple 
+Grade: Gold 🥇
+Effect Pokemon: Attack -2.0
+Sp. Attack +3.0
+
+
+=====Emblem Machop=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Orange 
+Grade: Bronze 🥉
+Effect Pokemon: Attack +1.0
+Speed -21
+
+----
+Color: Orange 
+Grade: Sliver 🥈
+Effect Pokemon: Attack +1.5
+Speed -28
+
+----
+Color: Orange 
+Grade: Gold 🥇
+Effect Pokemon: Attack +2.0
+Speed -35
+
+
+=====Emblem Machoke=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Orange 
+Grade: Bronze 🥉
+Effect Pokemon: Attack +1.0
+Sp. Defense -3.0
+
+----
+Color: Orange 
+Grade: Sliver 🥈
+Effect Pokemon: Attack +1.5
+Sp. Defense -4.0
+
+----
+Color: Orange 
+Grade: Gold 🥇
+Effect Pokemon: Attack +2.0
+Sp. Defense -5.0
+
+
+=====Emblem Machamp=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Orange 
+Grade: Bronze 🥉
+Effect Pokemon: Attack +1.0
+Sp. Attack -1.5
+
+----
+Color: Orange 
+Grade: Sliver 🥈
+Effect Pokemon: Attack +1.5
+Sp. Attack -2.5
+
+----
+Color: Orange 
+Grade: Gold 🥇
+Effect Pokemon: Attack +2.0
+Sp. Attack -3.0
+
+
+=====Emblem Bellsprout=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Green 
+Grade: Bronze 🥉
+Effect Pokemon: Attack +1.0
+Defense -3.0
+
+----
+Color: Green 
+Grade: Sliver 🥈
+Effect Pokemon: Attack +1.5
+Defense -4.0
+
+----
+Color: Green 
+Grade: Gold 🥇
+Effect Pokemon: Attack +2.0
+Defense -5.0
+
+
+=====Emblem Weepinbell=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Green 
+Grade: Bronze 🥉
+Effect Pokemon: HP -30
+Attack +1.0
+
+----
+Color: Green 
+Grade: Sliver 🥈
+Effect Pokemon: HP -40
+Attack +1.5
+
+----
+Color: Green 
+Grade: Gold 🥇
+Effect Pokemon: HP -50
+Attack +2.0
+
+
+=====Emblem Victreebel=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Green 
+Black 
+Grade: Bronze 🥉
+Effect Pokemon: Attack +1.0
+Sp. Defense -3.0
+
+----
+Color: Green 
+Black 
+Grade: Sliver 🥈
+Effect Pokemon: Attack +1.5
+Sp. Defense -4.0
+
+----
+Color: Green 
+Black 
+Grade: Gold 🥇
+Effect Pokemon: Attack +2.0
+Sp. Defense -5.0
+
+
+=====Emblem Tentacool=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Blue 
+Grade: Bronze 🥉
+Effect Pokemon: HP -30
+Sp. Defense +3.0
+
+----
+Color: Blue 
+Grade: Sliver 🥈
+Effect Pokemon: HP -40
+Sp. Defense +4.0
+
+----
+Color: Blue 
+Grade: Gold 🥇
+Effect Pokemon: HP -50
+Sp. Defense +5.0
+
+
+=====Emblem Tentacruel=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Blue 
+Black 
+Grade: Bronze 🥉
+Effect Pokemon: Sp. Defense +3.0
+Critical-Hit Rate -0.6%
+
+----
+Color: Blue 
+Black 
+Grade: Sliver 🥈
+Effect Pokemon: Sp. Defense +4.0
+Critical-Hit Rate -0.8%
+
+----
+Color: Blue 
+Black 
+Grade: Gold 🥇
+Effect Pokemon: Sp. Defense +5.0
+Critical-Hit Rate -1.0%
+
+
+=====Emblem Geodude=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Orange 
+Grade: Bronze 🥉
+Effect Pokemon: Defense +3
+Sp. Defense -3.0
+
+----
+Color: Orange 
+Grade: Sliver 🥈
+Effect Pokemon: Defense +4
+Sp. Defense -4.0
+
+----
+Color: Orange 
+Grade: Gold 🥇
+Effect Pokemon: Defense +5
+Sp. Defense -5.0
+
+
+=====Emblem Graveler=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Orange 
+Grade: Bronze 🥉
+Effect Pokemon: Defense +3
+Critical-Hit Rate -0.6%
+
+----
+Color: Orange 
+Grade: Sliver 🥈
+Effect Pokemon: Defense +4
+Critical-Hit Rate -0.8%
+
+----
+Color: Orange 
+Grade: Gold 🥇
+Effect Pokemon: Defense +5
+Critical-Hit Rate -1.0%
+
+
+=====Emblem Golem=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Orange 
+Grade: Bronze 🥉
+Effect Pokemon: Defense +3
+Sp. Attack -1.5
+
+----
+Color: Orange 
+Grade: Sliver 🥈
+Effect Pokemon: Defense +4
+Sp. Attack -2.5
+
+----
+Color: Orange 
+Grade: Gold 🥇
+Effect Pokemon: Defense +5
+Sp. Attack -3.0
+
+
+=====Emblem Ponyta=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Red 
+Grade: Bronze 🥉
+Effect Pokemon: HP -30
+Attack +1.0
+
+----
+Color: Red 
+Grade: Sliver 🥈
+Effect Pokemon: HP -40
+Attack +1.5
+
+----
+Color: Red 
+Grade: Gold 🥇
+Effect Pokemon: HP -50
+Attack +2.0
+
+
+=====Emblem Rapidash=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Red 
+Grade: Bronze 🥉
+Effect Pokemon: Attack +1.0
+Defense -3.0
+
+----
+Color: Red 
+Grade: Sliver 🥈
+Effect Pokemon: Attack +1.5
+Defense -4.0
+
+----
+Color: Red 
+Grade: Gold 🥇
+Effect Pokemon: Attack +2.0
+Defense -5.0
+
+
+=====Emblem Slowpoke=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Blue 
+Grade: Bronze 🥉
+Effect Pokemon: Defense +3
+Speed -21
+
+----
+Color: Blue 
+Grade: Sliver 🥈
+Effect Pokemon: Defense +4
+Speed -28
+
+----
+Color: Blue 
+Grade: Gold 🥇
+Effect Pokemon: Defense +5
+Speed -35
+
+
+=====Emblem Slowbro=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Blue 
+Purple 
+Grade: Bronze 🥉
+Effect Pokemon: Defense +3
+Speed -21
+
+----
+Color: Blue 
+Purple 
+Grade: Sliver 🥈
+Effect Pokemon: Defense +4
+Speed -28
+
+----
+Color: Blue 
+Purple 
+Grade: Gold 🥇
+Effect Pokemon: Defense +5
+Speed -35
+
+
+=====Emblem Magnemite=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Yellow 
+Grade: Bronze 🥉
+Effect Pokemon: HP -30
+Defense +3
+
+----
+Color: Yellow 
+Grade: Sliver 🥈
+Effect Pokemon: HP -40
+Defense +4
+
+----
+Color: Yellow 
+Grade: Gold 🥇
+Effect Pokemon: HP -50
+Defense +5
+
+
+=====Emblem Magneton=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Yellow 
+Grade: Bronze 🥉
+Effect Pokemon: Attack -1.0
+Defense +3
+
+----
+Color: Yellow 
+Grade: Sliver 🥈
+Effect Pokemon: Attack -1.5
+Defense +4
+
+----
+Color: Yellow 
+Grade: Gold 🥇
+Effect Pokemon: Attack -2.0
+Defense +5
+
+
+=====Emblem Farfetch'd=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: White 
+Grade: Bronze 🥉
+Effect Pokemon: HP -30
+Critical-Hit Rate +0.6%
+
+----
+Color: White 
+Grade: Sliver 🥈
+Effect Pokemon: HP -40
+Critical-Hit Rate +0.8%
+
+----
+Color: White 
+Grade: Gold 🥇
+Effect Pokemon: HP -50
+Critical-Hit Rate +1.0%
+
+
+=====Emblem Doduo=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: White 
+Grade: Bronze 🥉
+Effect Pokemon: HP -30
+Speed +21
+
+----
+Color: White 
+Grade: Sliver 🥈
+Effect Pokemon: HP -40
+Speed +28
+
+----
+Color: White 
+Grade: Gold 🥇
+Effect Pokemon: HP -50
+Speed +35
+
+
+=====Emblem Dodrio=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: White 
+Grade: Bronze 🥉
+Effect Pokemon: HP -30
+Speed +21
+
+----
+Color: White 
+Grade: Sliver 🥈
+Effect Pokemon: HP -40
+Speed +28
+
+----
+Color: White 
+Grade: Gold 🥇
+Effect Pokemon: HP -50
+Speed +35
+
+
+=====Emblem Seel=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Blue 
+Grade: Bronze 🥉
+Effect Pokemon: HP +30
+Attack -1.0
+
+----
+Color: Blue 
+Grade: Sliver 🥈
+Effect Pokemon: HP +40
+Attack -1.5
+
+----
+Color: Blue 
+Grade: Gold 🥇
+Effect Pokemon: HP +50
+Attack -2.0
+
+
+=====Emblem Dewgong=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Blue 
+Grade: Bronze 🥉
+Effect Pokemon: HP +30
+Sp. Attack -1.5
+
+----
+Color: Blue 
+Grade: Sliver 🥈
+Effect Pokemon: HP +40
+Sp. Attack -2.5
+
+----
+Color: Blue 
+Grade: Gold 🥇
+Effect Pokemon: HP +50
+Sp. Attack -3.0
+
+
+=====Emblem Grimer=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Black 
+Grade: Bronze 🥉
+Effect Pokemon: HP +30
+Attack -1.0
+
+----
+Color: Black 
+Grade: Sliver 🥈
+Effect Pokemon: HP +40
+Attack -1.5
+
+----
+Color: Black 
+Grade: Gold 🥇
+Effect Pokemon: HP +50
+Attack -2.0
+
+
+=====Emblem Muk=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Black 
+Grade: Bronze 🥉
+Effect Pokemon: HP +30
+Sp. Attack -1.5
+
+----
+Color: Black 
+Grade: Sliver 🥈
+Effect Pokemon: HP +40
+Sp. Attack -2.5
+
+----
+Color: Black 
+Grade: Gold 🥇
+Effect Pokemon: HP +50
+Sp. Attack -3.0
+
+
+=====Emblem Shellder=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Blue 
+Grade: Bronze 🥉
+Effect Pokemon: HP -30
+Defense +3
+
+----
+Color: Blue 
+Grade: Sliver 🥈
+Effect Pokemon: HP -40
+Defense +4
+
+----
+Color: Blue 
+Grade: Gold 🥇
+Effect Pokemon: HP -50
+Defense +5
+
+
+=====Emblem Cloyster=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Blue 
+Grade: Bronze 🥉
+Effect Pokemon: Defense +3
+Sp. Defense -3.0
+
+----
+Color: Blue 
+Grade: Sliver 🥈
+Effect Pokemon: Defense +4
+Sp. Defense -4.0
+
+----
+Color: Blue 
+Grade: Gold 🥇
+Effect Pokemon: Defense +5
+Sp. Defense -5.0
+
+
+=====Emblem Gastly=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Purple 
+Grade: Bronze 🥉
+Effect Pokemon: HP -30
+Speed +21
+
+----
+Color: Purple 
+Grade: Sliver 🥈
+Effect Pokemon: HP -40
+Speed +28
+
+----
+Color: Purple 
+Grade: Gold 🥇
+Effect Pokemon: HP -50
+Speed +35
+
+
+=====Emblem Haunter=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Purple 
+Grade: Bronze 🥉
+Effect Pokemon: Defense -3.0
+Speed +21
+
+----
+Color: Purple 
+Grade: Sliver 🥈
+Effect Pokemon: Defense -4.0
+Speed +28
+
+----
+Color: Purple 
+Grade: Gold 🥇
+Effect Pokemon: Defense -5.0
+Speed +35
+
+
+=====Emblem Gengar=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Purple 
+Black 
+Grade: Bronze 🥉
+Effect Pokemon: Attack -1.0
+Speed +21
+
+----
+Color: Purple 
+Black 
+Grade: Sliver 🥈
+Effect Pokemon: Attack -1.5
+Speed +28
+
+----
+Color: Purple 
+Black 
+Grade: Gold 🥇
+Effect Pokemon: Attack -2.0
+Speed +35
+
+
+=====Emblem Onix=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Orange 
+Grade: Bronze 🥉
+Effect Pokemon: HP -30
+Defense +3
+
+----
+Color: Orange 
+Grade: Sliver 🥈
+Effect Pokemon: HP -40
+Defense +4
+
+----
+Color: Orange 
+Grade: Gold 🥇
+Effect Pokemon: HP -50
+Defense +5
+
+
+=====Emblem Drowzee=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Purple 
+Grade: Bronze 🥉
+Effect Pokemon: Sp. Defense +3.0
+Speed -21
+
+----
+Color: Purple 
+Grade: Sliver 🥈
+Effect Pokemon: Sp. Defense +4.0
+Speed -28
+
+----
+Color: Purple 
+Grade: Gold 🥇
+Effect Pokemon: Sp. Defense +5.0
+Speed -35
+
+
+=====Emblem Hypno=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Purple 
+Grade: Bronze 🥉
+Effect Pokemon: Sp. Defense +3.0
+Critical-Hit Rate -0.6%
+
+----
+Color: Purple 
+Grade: Sliver 🥈
+Effect Pokemon: Sp. Defense +4.0
+Critical-Hit Rate -0.8%
+
+----
+Color: Purple 
+Grade: Gold 🥇
+Effect Pokemon: Sp. Defense +5.0
+Critical-Hit Rate -1.0%
+
+
+=====Emblem Krabby=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Blue 
+Grade: Bronze 🥉
+Effect Pokemon: HP -30
+Attack +1.0
+
+----
+Color: Blue 
+Grade: Sliver 🥈
+Effect Pokemon: HP -40
+Attack +1.5
+
+----
+Color: Blue 
+Grade: Gold 🥇
+Effect Pokemon: HP -50
+Attack +2.0
+
+
+=====Emblem Kingler=====
+Bronze 🥉 -> Sliver 🥈
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 100%
+
+Sliver 🥈 -> Gold 🥇
+Need 3 Emblems Same Icon (not evolution) and Grade
+Aeos Coin: 100
+Success rate 40%
+
+----
+Color: Blue 
+Grade: Bronze 🥉
+Effect Pokemon: Attack +1.0
+Sp. Defense -3.0
+
+----
+Color: Blue 
+Grade: Sliver 🥈
+Effect Pokemon: Attack +1.5
+Sp. Defense -4.0
+
+----
+Color: Blue 
+Grade: Gold 🥇
+Effect Pokemon: Attack +2.0
+Sp. Defense -5.0
+
+
