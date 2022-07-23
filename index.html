@@ -1,13 +1,39 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <title>Unite Emblem Build Finder</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="emblems.js"></script>
+	<meta charset="utf-8" />
+	<title>Unite Emblem Build Finder</title>
+	<link rel="stylesheet" href="style.css" />
+	<script src="emblems.js"></script>
 </head>
 <body onload="setup()">
-    <textarea id="test-input"></textarea>
-    <div id="test-output"></div>
+	<div class="tab-list">
+		<div data-tab="build">Find Build</div>
+		<div data-tab="free">Freestyle</div>
+		<div data-tab="info">Emblem Info</div>
+		<div data-tab="mine">My Emblems</div>
+		<div data-tab="settings">Settings</div>
+		<div data-tab="help">Help/About</div>
+	</div>
+	<div class="tab-content">
+		<div data-tab="free">
+			<textarea></textarea>
+			<div class="output"></div>
+		</div>
+		<div data-tab="info">
+			<!-- TODO toggles go here(bronze, silver, gold, owned, & unowned) -->
+			<table>
+				<thead>
+					<tr>
+						<th>Pokémon</th>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+		</div>
+		<div data-tab="mine">
+			<textarea></textarea>
+		</div>
+	</div>
 </body>
 </html>
