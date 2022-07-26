@@ -1,4 +1,3 @@
-//#region classes
 class Pokemon {
     constructor() {
         this.grades = [];
@@ -15,8 +14,8 @@ class Grade {
 }
 class Emblem {
 }
-//#endregion
-//#region global variables
+class Filter {
+}
 var pkmnList;
 const pkmnByName = new Map();
 const combos = [
@@ -26,12 +25,12 @@ const combos = [
         stat: "Sp. Attack",
         amount: 1
     },
-    /*{
+    {
         color: "Yellow",
         startCount: 3,
-        stat: "",
-        amount:
-    },*/
+        stat: "Movement Speed",
+        amount: 3
+    },
     {
         color: "Red",
         startCount: 3,
@@ -84,7 +83,9 @@ const statNames = [
     "HP", "Attack", "Defense", "Sp. Attack", "Sp. Defense",
     "Speed", "Critical-Hit Rate"
 ];
-//#endregion
+const ownershipFlags = 0b11000;
+var filterFlags = 0b11111;
+var filters = [new Filter(), new Filter()];
 function getComboEffect(color, count) {
     for (const combo of combos) {
         if (combo.color !== color)
@@ -102,13 +103,16 @@ function getComboEffect(color, count) {
             effect.amount *= 2;
         if (count >= minCount + 4)
             effect.amount *= 2;
+        if (color === "yellow" && count < 5)
+            effect.amount = 4;
         return effect;
     }
 }
 function applyFlatEffect(effect, effects, multiplier = 1) {
     var _a;
     let val = (_a = effects.get(effect.stat)) !== null && _a !== void 0 ? _a : 0;
-    effects.set(effect.stat, val + effect.amount * multiplier);
+    val = ((val * 10 + effect.amount * 10) * multiplier) / 10;
+    effects.set(effect.stat, val);
 }
 function calculateResults() {
     var _a;
@@ -135,7 +139,6 @@ function calculateResults() {
         }
     }
     let fxArray = [];
-    // only add non-zero values
     for (let [stat, val] of effects) {
         if (val < -0.01 || val > 0.01) {
             fxArray.push({
@@ -146,7 +149,6 @@ function calculateResults() {
             });
         }
     }
-    // combos
     for (let [color, count] of colorCounts) {
         let effect = getComboEffect(color, count);
         if (effect)
@@ -157,7 +159,6 @@ function calculateResults() {
 function nidoranCheck(line) {
     if (!line.includes("nidoran"))
         return null;
-    // rudimentary gender checking
     if (line.includes('f') || line.includes('♀')) {
         return "Nidoran♀";
     }
@@ -169,12 +170,11 @@ function parseEmblem(line) {
         return null;
     let parts = line.split(/[ \t]+/);
     let tier = defaultTier;
-    // TODO add emoji support
-    if (parts.includes("bronze"))
+    if (parts.includes("bronze") || parts.includes('🥉'))
         tier = 0;
-    else if (parts.includes("silver"))
+    else if (parts.includes("silver") || parts.includes('🥈'))
         tier = 1;
-    else if (parts.includes("gold"))
+    else if (parts.includes("gold") || parts.includes('🥇'))
         tier = 2;
     let name = nidoranCheck(line);
     if (!name) {
@@ -198,7 +198,6 @@ function parseEmblem(line) {
         else {
             parseAttempt = parseInt(part);
         }
-        // already covers NaN
         if (parseAttempt > 0) {
             count = parseAttempt;
             break;
@@ -215,33 +214,82 @@ function parseEmblem(line) {
     return emblem;
 }
 function emblemsFromText(lines, limit) {
-    limit !== null && limit !== void 0 ? limit : (limit = 2970); // 3 tiers * 99 pokemon * 10 slots
+    limit !== null && limit !== void 0 ? limit : (limit = 2970);
     let emblems = [];
     let count = 0;
     for (let line of lines) {
         let emblem = parseEmblem(line);
         if (!emblem)
             continue;
-        if (emblem.count + count > limit) {
-            emblem.count = limit - count;
+        let toAdd = emblem.count;
+        if (toAdd + count > limit) {
+            toAdd = limit - count;
         }
-        emblems.push(emblem);
-        count += emblem.count;
+        let updated = false;
+        for (let existing of emblems) {
+            if (existing.pokemonName == emblem.pokemonName
+                && existing.grade == emblem.grade) {
+                updated = true;
+                if (toAdd + existing.count > maxEmblems) {
+                    toAdd = maxEmblems - existing.count;
+                    existing.count = maxEmblems;
+                }
+                else {
+                    existing.count += toAdd;
+                }
+                break;
+            }
+        }
+        if (!updated) {
+            if (toAdd > maxEmblems) {
+                toAdd = maxEmblems;
+            }
+            emblem.count = toAdd;
+            emblems.push(emblem);
+        }
+        count += toAdd;
         if (count >= limit)
             break;
     }
     return emblems;
 }
-function createFromTextfield(input) {
+function addTextareaEvents(input, func) {
+    input.addEventListener("keydown", () => func(input));
+    input.addEventListener("keyup", () => func(input));
+    input.addEventListener("paste", () => func(input));
+    func(input);
+}
+function getOwnedEmblem(firstCell) {
+    let name = firstCell.innerText;
+    let tier = tierNames.indexOf(firstCell.className);
+    for (let emblem of userEmblems) {
+        if (emblem.pokemonName === name && emblem.grade == tier)
+            return emblem;
+    }
+    return null;
+}
+function loadOwned(input) {
+    var _a, _b;
+    let lines = input.value.split('\n');
+    userEmblems = emblemsFromText(lines);
+    let rows = document.querySelector("[data-tab='info'] table").tBodies[0].rows;
+    for (let row of rows) {
+        let count = (_b = (_a = getOwnedEmblem(row.cells[0])) === null || _a === void 0 ? void 0 : _a.count) !== null && _b !== void 0 ? _b : 0;
+        row.cells[10].innerText = count ? count.toString() : "";
+    }
+    let flags = filterFlags & ownershipFlags;
+    if (flags && flags != ownershipFlags) {
+        filterTable();
+    }
+}
+function createFromTextarea(input) {
     let output = document.querySelector("[data-tab='free'] .output");
-    // remove old results
     while (output.firstElementChild) {
         output.firstElementChild.remove();
     }
     let lines = input.value.split('\n');
-    activeEmblems = emblemsFromText(lines, 10);
+    activeEmblems = emblemsFromText(lines, maxEmblems);
     const effects = calculateResults();
-    // add new results
     for (let effect of effects) {
         let tag = document.createElement("div");
         tag.className = effect.good ? "good" : "bad";
@@ -267,75 +315,198 @@ function getStatValue(stat, grade) {
         return grade.posEffect.amount;
     return 0;
 }
-// created for the whole minute the stat list was generated dynamically
-// that code was removed to control the order of the stat list
+function formatStat(stat, val) {
+    let dec = (stat.includes("Attack") || stat.includes("Critical")) ? 1 : 0;
+    return (val > 0 ? '+' : "") + val.toFixed(dec);
+}
+function filterOut(row) {
+    if ((filterFlags & ownershipFlags) == 0)
+        return true;
+    let tier = tierNames.indexOf(row.cells[0].className);
+    if (!(filterFlags & (1 << tier)))
+        return true;
+    if ((filterFlags & ownershipFlags) != ownershipFlags) {
+        let owned = (row.cells[10].innerText || "0") !== "0";
+        if (owned && !(filterFlags & 0b01000))
+            return true;
+        if (!owned && !(filterFlags & 0b10000))
+            return true;
+    }
+    let pokemon = pkmnByName.get(row.cells[0].innerText);
+    for (let filter of filters) {
+        if (!filter.value)
+            continue;
+        if (filter.isColor) {
+            let present = pokemon.colors.includes(filter.value);
+            if (present != ((filter.compare % 2) == 0))
+                return true;
+        }
+        else {
+            let present = false;
+            let pos = false;
+            if (pokemon.grades[0].posEffect.stat === filter.value) {
+                present = true;
+                pos = true;
+            }
+            else if (pokemon.grades[0].negEffect.stat === filter.value) {
+                present = true;
+            }
+            if (present == (filter.compare == 1))
+                return true;
+            if (filter.compare == 2 && !pos)
+                return true;
+            if (filter.compare == 3 && pos)
+                return true;
+        }
+    }
+    return false;
+}
+function filterTable() {
+    let tbl = document.querySelector("[data-tab='info'] table");
+    for (let row of tbl.tBodies[0].rows) {
+        row.classList.toggle("filtered", filterOut(row));
+    }
+}
 function addUnique(obj, array) {
     if (obj != null && !array.includes(obj))
         array.push(obj);
 }
-function createTH(text) {
-    let cell = document.createElement("th");
-    cell.innerText = text;
+function createTag(tagName, text, parent) {
+    let tag = document.createElement(tagName);
+    tag.innerText = text;
+    parent === null || parent === void 0 ? void 0 : parent.append(tag);
+    return tag;
+}
+function createColorCell(row, idx, colors) {
+    let cell = row.insertCell();
+    if (colors.length > idx) {
+        cell.innerText = colors[idx];
+        cell.classList.add(colors[idx]);
+    }
     return cell;
 }
 function setupInfoTable() {
-    let tbl = document.querySelector("[data-tab='info'] table");
-    // set up header
-    for (let stat of statNames) {
-        // FIXME also need sorting buttons
-        tbl.tHead.rows[0].append(createTH(stat));
+    let tab = document.querySelector(".tab-content [data-tab='info']");
+    let tbl = tab.querySelector("table");
+    let boxes = tab.querySelectorAll("input[type='checkbox']");
+    for (let i = 0; i < boxes.length; i++) {
+        let func = () => {
+            if (boxes[i].checked) {
+                filterFlags |= 1 << i;
+            }
+            else {
+                filterFlags &= ~(1 << i);
+            }
+        };
+        boxes[i].addEventListener("change", ev => { func(); filterTable(); });
+        func();
     }
-    tbl.tHead.rows[0].append(createTH("Color 1"));
-    tbl.tHead.rows[0].append(createTH("Color 2"));
-    tbl.tHead.rows[0].append(createTH("Owned"));
-    // rows for each pokemon
+    setupFilters(tab);
+    let groups = tab.querySelectorAll("optgroup[label='Colors']");
+    for (let combo of combos) {
+        groups.forEach(group => createTag("option", combo.color, group));
+    }
+    groups = tab.querySelectorAll("optgroup[label='Stats']");
+    {
+        let row = tbl.tHead.rows[0];
+        for (let stat of statNames) {
+            createTag("th", stat, row);
+            groups.forEach(group => createTag("option", stat, group));
+        }
+        createTag("th", "Color 1", row);
+        createTag("th", "Color 2", row);
+        createTag("th", "Owned", row);
+    }
     for (let pokemon of pkmnList) {
         for (let tier in pokemon.grades) {
             let grade = pokemon.grades[tier];
             let row = tbl.tBodies[0].insertRow();
-            // name & grade
             let cell = row.insertCell();
             cell.innerText = pokemon.name;
             cell.classList.add(tierNames[tier]);
-            // stats
             for (let stat of statNames) {
                 cell = row.insertCell();
                 let val = getStatValue(stat, grade);
                 if (val) {
-                    let dec = 0;
-                    if (stat.includes("Attack") || stat.includes("Critical")) {
-                        dec = 1;
-                    }
-                    cell.innerText = val.toFixed(dec);
-                    cell.classList.add("stat");
+                    cell.innerText = formatStat(stat, val);
+                    cell.classList.add("number");
                     cell.classList.add(val > 0 ? "good" : "bad");
                 }
             }
-            // colors
-            row.insertCell().innerText = pokemon.colors[0];
-            cell = row.insertCell();
-            if (pokemon.colors.length > 1)
-                cell.innerText = pokemon.colors[1];
-            // owned
-            row.insertCell();
+            createColorCell(row, 0, pokemon.colors);
+            createColorCell(row, 1, pokemon.colors);
+            row.insertCell().className = "number";
+        }
+    }
+    filterTable();
+}
+function changeFilterType(filter, selects) {
+    let item = selects[0].selectedIndex;
+    selects[1].disabled = item == 0;
+    if (item == 0) {
+        filter.value = null;
+    }
+    else if (item <= statNames.length) {
+        filter.value = statNames[item - 1];
+        filter.isColor = false;
+    }
+    else {
+        filter.value = combos[item - (statNames.length + 1)].color;
+        filter.isColor = true;
+    }
+}
+function setupFilters(tab) {
+    let htmlFilters = tab.querySelectorAll(".filter-req");
+    let idx = 0;
+    for (let htmlFilter of htmlFilters) {
+        const selects = htmlFilter.querySelectorAll("select");
+        if (!selects.length)
+            continue;
+        const filter = filters[idx++];
+        selects[0].addEventListener("change", () => {
+            changeFilterType(filter, selects);
+            filterTable();
+        });
+        changeFilterType(filter, selects);
+        selects[1].addEventListener("change", ev => {
+            filter.compare = selects[1].selectedIndex;
+            filterTable();
+        });
+        filter.compare = selects[1].selectedIndex;
+    }
+}
+function effectMatches(a, b) {
+    return a.amount == b.amount && a.stat === b.stat;
+}
+function calcIdenticalStats() {
+    const count = pkmnList.length;
+    for (let i = 0; i < count; i++) {
+        let pokemon = pkmnList[i];
+        pokemon.sameStats = [];
+        let a = pokemon.grades[0];
+        for (let j = 0; j < i; j++) {
+            let other = pkmnList[j];
+            let b = other.grades[0];
+            if (effectMatches(a.posEffect, b.posEffect)
+                && effectMatches(a.negEffect, b.negEffect)) {
+                pokemon.sameStats.push(other.name);
+                other.sameStats.push(pokemon.name);
+            }
         }
     }
 }
 function setup() {
-    // need falsy rather than nullsy
     setActiveTab((document.location.hash || "#free").substring(1), false);
-    let input = document.querySelector("[data-tab='free'] textarea");
-    input.addEventListener("keydown", () => createFromTextfield(input));
-    input.addEventListener("keyup", () => createFromTextfield(input));
-    input.addEventListener("paste", () => createFromTextfield(input));
     document.querySelectorAll(".tab-list > *").forEach(t => t.addEventListener("click", ev => setActiveTab(t.dataset.tab, true)));
     fetch("emblems.json").then(r => r.json()).then(json => {
         pkmnList = json;
         for (let pkmn of pkmnList) {
             pkmnByName.set(pkmn.name, pkmn);
         }
+        calcIdenticalStats();
         setupInfoTable();
-        createFromTextfield(input);
+        addTextareaEvents(document.querySelector("[data-tab='free'] textarea"), createFromTextarea);
+        addTextareaEvents(document.querySelector("[data-tab='mine'] textarea"), loadOwned);
     });
 }
 //# sourceMappingURL=emblems.js.map

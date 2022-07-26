@@ -81,27 +81,51 @@ table {
 td, th {
 	padding: 5px;
 }
-td.stat {
+td.number {
 	text-align: right;
 }
 td.Bronze {
-	background: rgba(127, 91, 31, 0.5) !important;
+	background: rgba(127, 91, 31, 0.5);
 }
 td.Silver {
-	background: rgba(192, 192, 192, 0.5) !important;
+	background: rgba(192, 192, 192, 0.5);
 }
 td.Gold {
-	background: rgba(127, 127, 16, 0.5) !important;
+	background: rgba(127, 127, 16, 0.5);
 }
-td.good {
-	background: rgba(0, 255, 0, 0.25) !important;
+td.Green, td.good {
+	background: rgba(0, 255, 0, 0.25);
 }
-td.bad {
-	background: rgba(255, 0, 0, 0.25) !important;
+td.Red, td.bad {
+	background: rgba(255, 0, 0, 0.25);
+}
+td.Blue {
+	background: rgba(0, 0, 255, 0.25);
+}
+td.Yellow {
+	background: rgba(255, 255, 0, 0.25);
+}
+td.White {
+	background: rgba(255, 255, 255, 0.25);
+}
+td.Black {
+	background: rgba(0, 0, 0, 0.25);
+}
+td.Purple {
+	background: rgba(127, 0, 127, 0.25);
+}
+td.Orange {
+	background: rgba(255, 127, 0, 0.25);
+}
+td.Pink {
+	background: rgba(255, 127, 191, 0.25);
+}
+tr.filtered {
+	display: none;
 }
 [data-tab="info"] table {
 	width: 100%;
-	margin-bottom: 8px;
+	margin: 8px 0px;
 	border: 1px solid #999;
 }
 [data-tab="info"] thead {
@@ -112,8 +136,13 @@ td.bad {
 	background: var(--bg-active);
 	text-overflow: ellipsis;
 }
-[data-tab="info"] td {
+[data-tab="info"] tbody {
 	background: var(--bg-inactive);
+}
+.filter-req {
+	display: inline-block;
+	margin-left: 1em;
+	margin-bottom: 8px;
 }
 #test-output div {
 	margin-top: 0.5em;
