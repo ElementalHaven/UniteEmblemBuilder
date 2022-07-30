@@ -8,7 +8,7 @@
 </head>
 <body onload="setup()">
 	<div class="tab-list">
-		<div data-tab="build">Find Build</div>
+		<!--<div data-tab="build">Find Build</div>-->
 		<div data-tab="free">Freestyle</div>
 		<div data-tab="info">Emblem Info</div>
 		<div data-tab="mine">My Emblems</div>
@@ -27,10 +27,12 @@
 			-->
 			<textarea></textarea>
 			<div class="output"></div>
+			<div>Share this build: <input type="text" 
+							   placeholder="Input emblems above to create a link" />
+			<button type="button">Copy</button></div>
 		</div>
 		<div data-tab="info">
 			<div>
-				<!-- FIXME need to give ids and fors -->
 				<div class="filter-req">
 					<label>Bronze<input type="checkbox" checked /></label>
 					<label>Silver<input type="checkbox" checked /></label>
@@ -84,7 +86,8 @@
 		<div data-tab="help">
 			Input unique emblems into text areas 1 per line.<br />
 			The format is 
-			<pre style="display: inline-block; margin: 0">tier pokemon count</pre>.<br />
+			<pre style="display: inline-block; margin: 0">tier pokemon count</pre>.
+			<br />
 			Capitalization and order of items in a line does not matter.<br />
 			Tier and count can both be omitted.
 			Tier defaults to Bronze and count defaults to 1.<br />

@@ -1,7 +1,6 @@
 function convert(inFilename) {
     return fetch(inFilename).then(r => r.text()).then(txt => raw2json(txt));
 }
-// I forgot about the Nidorans. Have to use UTF8
 function identifyExtendedChars(str) {
     for (let i = 0; i < str.length; i++) {
         const code = str.charCodeAt(i);
@@ -11,7 +10,6 @@ function identifyExtendedChars(str) {
         }
     }
 }
-// Check to make sure that each Pokemon has exactly 3 grades
 function verifyGradeCounts(list) {
     for (let pokemon of list) {
         const gradeCount = pokemon.grades.length;
@@ -33,13 +31,9 @@ function raw2json(rawText) {
     let grade;
     let lastProp;
     for (let line of lines) {
-        // consider trimming string here if there's issues
         if (line.length == 0)
             continue;
-        // not tracking upgrade success rate for each Pokemon
-        // it lies outside the scope of this program
-        // also, I'm pretty sure it's a constant 100% and 40%
-        if (line.startsWith("==")) { // start new pokemon
+        if (line.startsWith("==")) {
             pokemon = new Pokemon();
             let start = line.indexOf(' ') + 1;
             let end = line.indexOf('=', start);
@@ -47,11 +41,11 @@ function raw2json(rawText) {
             results.push(pokemon);
             grade = null;
         }
-        else if (line.startsWith("--")) { // start new grade
+        else if (line.startsWith("--")) {
             grade = new Grade();
             pokemon.grades.push(grade);
         }
-        else if (grade) { // grade property
+        else if (grade) {
             let idx = line.indexOf(':');
             let prop, val;
             if (idx == -1) {
@@ -70,7 +64,6 @@ function raw2json(rawText) {
                     }
                     break;
                 case "Grade":
-                    // not handling unless I suspect something is out of order
                     break;
                 case "Effect Pokemon":
                     idx = val.lastIndexOf(' ');
@@ -78,7 +71,6 @@ function raw2json(rawText) {
                         stat: val.substring(0, idx),
                         amount: parseFloat(val.substring(idx + 1))
                     };
-                    //grade.effects.push(effect);
                     if (effect.amount > 0) {
                         if (grade.posEffect) {
                             effectWarning(pokemon.name, true);

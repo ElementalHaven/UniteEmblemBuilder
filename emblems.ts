@@ -39,6 +39,91 @@ class Filter {
 	isColor: boolean;
 }
 
+const BITS_PER_CHAR = 6;
+const BIT_CHAR_MASK = (1 << BITS_PER_CHAR) - 1;
+
+class B64Convert {
+	static parseChar(char: string): number {
+		let cp = char.charCodeAt(0);
+		// + and -
+		if(cp == 43) return 63;
+		if(cp == 45) return 62;
+		// uppercase
+		if(cp > 64 && cp < 91) return cp - 39;
+		// lowercase
+		if(cp > 96 && cp < 123) return cp - 97;
+		// numbers
+		if(cp > 47 && cp < 58) return cp + 4;
+		return 0;
+	}
+
+	static toChar(val: number): string {
+		let cp = 97;
+		if(val < 26) cp = val + 97;
+		else if(val < 52) cp = 39 + val;
+		else if(val < 62) cp = val - 4;
+		else if(val == 62) cp = 45;
+		else if(val == 63) cp = 43;
+		return String.fromCharCode(cp);
+	}
+
+	private strValue: string;
+	// number of bits currently in bitValue
+	private bitCount: number = 0;
+	private bitValue: number = 0;
+
+	constructor(value?: string) {
+		this.strValue = value || "";
+	}
+
+	readBits(count: number): number {
+		while(this.bitCount < count) {
+			if(this.strValue.length) {
+				let newBits = B64Convert.parseChar(this.strValue[0]);
+				this.strValue = this.strValue.substring(1);
+				this.bitValue |= newBits << this.bitCount;
+				this.bitCount += BITS_PER_CHAR;
+			} else {
+				// just use 0s for remaining
+				this.bitCount = count;
+			}
+		}
+		const mask = (1 << count) - 1;
+		let out = this.bitValue & mask;
+		this.bitValue >>>= count;
+		this.bitCount -= count;
+		return out;
+	}
+
+	private encodeBits(pad: boolean = false) {
+		while(true) {
+			let hasEnough = this.bitCount >= BITS_PER_CHAR;
+			let shouldPad = pad && this.bitValue;
+			if(!hasEnough && !shouldPad) break;
+
+			if(!hasEnough) {
+				this.bitCount = BITS_PER_CHAR;
+			}
+			this.strValue += B64Convert.toChar(this.bitValue & BIT_CHAR_MASK);
+			this.bitValue >>>= BITS_PER_CHAR;
+			this.bitCount -= BITS_PER_CHAR;
+		}
+	}
+
+	writeBits(value: number, count: number): void {
+		this.bitValue |= value << this.bitCount;
+		this.bitCount += count;
+		if(value) this.encodeBits();
+	}
+
+	endWrite(): string {
+		if(this.bitValue) {
+			this.encodeBits(true);
+		}
+		return this.strValue;
+	}
+}
+
 //#endregion
 
 //#region global variables
@@ -115,6 +200,12 @@ const ownershipFlags = 0b11000;
 // Apparently it was added in ES6
 var filterFlags = 0b11111;
 var filters = [new Filter(), new Filter()];
+var shareCode: string = null;
+const likelyPopular = [
+	"Arcanine", "Fearow", "Machamp", "Alakazam", "Venusaur",
+	"Rattata", "Pidgey", "Victreebel", "Gengar", "Beedrill",
+	"Rapidash", "Vileplume", "Venomoth" // saving last spot as a special case
+];
 
 //#endregion
 
@@ -336,7 +427,8 @@ function loadOwned(input: HTMLTextAreaElement): void {
 }
 
 function createFromTextarea(input: HTMLTextAreaElement): void {
-	let output = document.querySelector("[data-tab='free'] .output");
+	const tab = input.parentElement;
+	let output = tab.querySelector(".output");
 	// remove old results
 	while(output.firstElementChild) {
 		output.firstElementChild.remove()
@@ -344,6 +436,10 @@ function createFromTextarea(input: HTMLTextAreaElement): void {
 
 	let lines = input.value.split('\n');
 	activeEmblems = emblemsFromText(lines, maxEmblems);
+
+	shareCode = createShareCode();
+	tab.querySelector("input").value = shareCode.length == 0 ? "" :
+		"https://elementalhaven.github.io/UniteEmblemBuilder/#" + shareCode;
 
 	const effects = calculateResults();
 
@@ -361,12 +457,82 @@ function createFromTextarea(input: HTMLTextAreaElement): void {
 	}
 }
 
+//#region share codes
+
+/* There's a number of currently invalid pokemon configurations
+ * in share codes that can be used for future compatability:
+ * - The special cases of monId = 0x7E or 0x7F
+ * - A pokemon with a monId >= 100 and tier set to silver or gold previously
+ * - Maybe a tier of silver or gold and no monId
+ *		it could conflict with end of list detection though
+ *		and would only add a grand total of 2 new values
+ */
+
+function createShareCode(): string {
+	let convert = new B64Convert();
+	for(let emblem of activeEmblems) {
+		let b1 = emblem.grade ? 1 : 0;
+		let popIdx = likelyPopular.indexOf(emblem.pokemonName);
+		let monId = pkmnList.indexOf(pkmnByName.get(emblem.pokemonName)) + 1;
+		// we don't need to compact bronze as they're already compact
+		// use the room for more pokemon instead
+		if(b1 && popIdx != -1) {
+			b1 = 0;
+			monId = 99 + emblem.grade + (popIdx << 1);
+		}
+
+		for(let i = 0; i < emblem.count; i++) {
+			// compact tier into 1 bit of storage if bronze or special
+			convert.writeBits(b1, 1);
+			if(b1) convert.writeBits(emblem.grade - 1, 1);
+
+			convert.writeBits(monId, 7);
+		}
+	}
+	return convert.endWrite();
+}
+
+function parseShareCode(code: string, futureCompat: boolean = false): string {
+	let rows = "";
+	let convert = new B64Convert(code);
+	for(let i = 0; i < 10; i++) {
+		// compact tier into 1 bit of storage if bronze or special
+		let tier = convert.readBits(1);
+		if(tier) tier += (convert.readBits(1));
+
+		let monId = convert.readBits(7);
+		if(!monId) break;
+
+		if(!futureCompat && monId == 127) {
+			futureCompat = true;
+			--i;
+		} else {
+			let name: string;
+			if(!futureCompat && monId > 99) {
+				monId -= 100;
+				tier = (monId & 1) + 1;
+				name = likelyPopular[monId >> 1];
+			} else {
+				name = pkmnList[monId - 1].name;
+			}
+			if(rows) rows += '\n';
+			rows += tierNames[tier] + ' ' + name;
+		}
+	}
+	return rows;
+}
+
+//#endregion
+
 function setActiveTab(tab: string, updateHash: boolean): void {
 	document.querySelector(".tab-list > .active")?.classList?.remove("active");
 	document.querySelector(".tab-content > .active")?.classList?.remove("active");
-	document.querySelectorAll(`[data-tab="${tab}"]`).forEach(
-		t => t.classList.add("active")
-	);
+	let sel = document.querySelectorAll(`[data-tab="${tab}"]`);
+	if(!sel.length) {
+		shareCode = tab;
+		sel = document.querySelectorAll('[data-tab="free"]');
+	}
+	sel.forEach(t => t.classList.add("active"));
 	if(updateHash) document.location.hash = tab;
 }
 
@@ -605,6 +771,30 @@ function setup(): void {
 		t => t.addEventListener("click", ev => setActiveTab(t.dataset.tab, true))
 	);
 
+	const freeTab = document.querySelector(".tab-content [data-tab='free']");
+	const freeArea = freeTab.querySelector<HTMLTextAreaElement>("textarea");
+	const freeInp = freeTab.querySelector("input");
+	freeInp.addEventListener("keypress", ev => {
+		if(ev.key == "Enter") {
+			let txt = freeInp.value;
+			let idx = txt.indexOf('#');
+			let future = false;
+			if(idx == -1) {
+				idx = txt.indexOf('?');
+				future = idx != -1;
+			}
+			if(++idx < txt.length) {
+				shareCode = txt.substring(idx);
+				freeArea.value = parseShareCode(shareCode, future);
+				createFromTextarea(freeArea);
+			}
+
+		}
+	});
+	freeTab.querySelector("button").addEventListener("click", ev => {
+		navigator.clipboard.writeText(freeInp.value);
+	});
+
 	fetch("emblems.json").then(r => r.json()).then(json => {
 		pkmnList = json;
 		for(let pkmn of pkmnList) {
@@ -614,8 +804,10 @@ function setup(): void {
 		calcIdenticalStats();
 		setupInfoTable();
 
-		addTextareaEvents(document.querySelector<HTMLTextAreaElement>(
-			"[data-tab='free'] textarea"), createFromTextarea);
+		if(shareCode) {
+			freeArea.value = parseShareCode(shareCode);
+		}
+		addTextareaEvents(freeArea, createFromTextarea);
 		addTextareaEvents(document.querySelector<HTMLTextAreaElement>(
 			"[data-tab='mine'] textarea"), loadOwned);
 	});

@@ -63,14 +63,16 @@ body {
 .tab-content > .active {
 	display: block;
 }
-textarea {
-	width: 400px;
-	height: 400px;
+input[type="text"], textarea {
 	border: 1px solid #999;
 	outline: none;
 	background: rgba(127, 127, 127, 0.1);
 	color: var(--fg-col);
 	padding: 3px 5px;
+}
+textarea {
+	width: 400px;
+	height: 400px;
 }
 textarea:focus {
 	border-color: #36F;
@@ -138,6 +140,18 @@ tr.filtered {
 }
 [data-tab="info"] tbody {
 	background: var(--bg-inactive);
+}
+[data-tab="free"] input {
+	width: 450px;
+}
+[data-tab="free"] textarea {
+	height: 168px;
+}
+[data-tab="free"] > :last-child {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 8px;
 }
 .filter-req {
 	display: inline-block;
