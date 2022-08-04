@@ -409,6 +409,9 @@ function getOwnedEmblem(firstCell: HTMLTableCellElement): Emblem {
 }
 
 function loadOwned(input: HTMLTextAreaElement): void {
+	if(window.localStorage) {
+		window.localStorage.setItem("ueb_owned", input.value);
+	}
 	let lines = input.value.split('\n');
 	userEmblems = emblemsFromText(lines);
 
@@ -808,7 +811,15 @@ function setup(): void {
 			freeArea.value = parseShareCode(shareCode);
 		}
 		addTextareaEvents(freeArea, createFromTextarea);
-		addTextareaEvents(document.querySelector<HTMLTextAreaElement>(
-			"[data-tab='mine'] textarea"), loadOwned);
+		const myArea = document.querySelector<HTMLTextAreaElement>(
+			"[data-tab='mine'] textarea");
+		if(!myArea.value && window.localStorage) {
+			let txt = window.localStorage.getItem("ueb_owned");
+			if(txt) {
+				myArea.value = txt;
+			}
+		}
+		addTextareaEvents(myArea, loadOwned);
+		
 	});
 }

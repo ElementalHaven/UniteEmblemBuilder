@@ -357,6 +357,9 @@ function getOwnedEmblem(firstCell) {
 }
 function loadOwned(input) {
     var _a, _b;
+    if (window.localStorage) {
+        window.localStorage.setItem("ueb_owned", input.value);
+    }
     let lines = input.value.split('\n');
     userEmblems = emblemsFromText(lines);
     let rows = document.querySelector("[data-tab='info'] table").tBodies[0].rows;
@@ -677,7 +680,14 @@ function setup() {
             freeArea.value = parseShareCode(shareCode);
         }
         addTextareaEvents(freeArea, createFromTextarea);
-        addTextareaEvents(document.querySelector("[data-tab='mine'] textarea"), loadOwned);
+        const myArea = document.querySelector("[data-tab='mine'] textarea");
+        if (!myArea.value && window.localStorage) {
+            let txt = window.localStorage.getItem("ueb_owned");
+            if (txt) {
+                myArea.value = txt;
+            }
+        }
+        addTextareaEvents(myArea, loadOwned);
     });
 }
 //# sourceMappingURL=emblems.js.map
