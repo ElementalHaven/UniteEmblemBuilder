@@ -35,6 +35,7 @@ class Filter {
 	isColor: boolean;
 }
 
+const MIN_MON_BITS = 7;
 const BITS_PER_CHAR = 6;
 const BIT_CHAR_MASK = (1 << BITS_PER_CHAR) - 1;
 
@@ -214,10 +215,13 @@ const ownershipFlags = 0b11000;
 var filterFlags = 0b11111;
 var filters = [new Filter(), new Filter()];
 var shareCode: string = null;
-const likelyPopular = [
+/*const likelyPopular = [
 	"Arcanine", "Fearow", "Machamp", "Alakazam", "Venusaur",
 	"Rattata", "Pidgey", "Victreebel", "Gengar", "Beedrill",
 	"Rapidash", "Vileplume", "Venomoth" // saving last spot as a special case
+];*/
+const likelyPopularIds = [
+	59, 22, 68, 65, 3, 19, 16, 71, 94, 15, 78, 45, 49
 ];
 
 //#endregion
@@ -458,7 +462,7 @@ function createFromTextarea(input: HTMLTextAreaElement): void {
 
 	shareCode = createShareCode();
 	tab.querySelector("input").value = shareCode.length == 0 ? "" :
-		"https://elementalhaven.github.io/UniteEmblemBuilder/#" + shareCode;
+		"https://elementalhaven.github.io/UniteEmblemBuilder/?" + shareCode;
 
 	const effects = calculateResults();
 
@@ -478,41 +482,15 @@ function createFromTextarea(input: HTMLTextAreaElement): void {
 
 //#region share codes
 
-/* There's a number of currently invalid pokemon configurations
- * in share codes that can be used for future compatability:
- * - The special cases of monId = 0x7E or 0x7F
- * - A pokemon with a monId >= 100 and tier set to silver or gold previously
- * - Maybe a tier of silver or gold and no monId
- *		it could conflict with end of list detection though
- *		and would only add a grand total of 2 new values
- */
-
-function createShareCode(): string {
-	let convert = new B64Convert();
-	for(let emblem of activeEmblems) {
-		let b1 = emblem.grade ? 1 : 0;
-		let popIdx = likelyPopular.indexOf(emblem.pokemonName);
-		let monId = pkmnList.indexOf(pkmnByName.get(emblem.pokemonName)) + 1;
-		// we don't need to compact bronze as they're already compact
-		// use the room for more pokemon instead
-		if(b1 && popIdx != -1) {
-			b1 = 0;
-			monId = 99 + emblem.grade + (popIdx << 1);
-		}
-
-		for(let i = 0; i < emblem.count; i++) {
-			// compact tier into 1 bit of storage if bronze or special
-			convert.writeBits(b1, 1);
-			if(b1) convert.writeBits(emblem.grade - 1, 1);
-
-			convert.writeBits(monId, 7);
-		}
-	}
-	return convert.endWrite();
-}
-
-function parseShareCode(code: string, futureCompat: boolean = false): string {
-	let rows = "";
+// legacy share codes used a constant 7 bits for pokemon ids since there was
+// only 99 emblems at the time and packed the remaining bits with 14 pokemon
+// expected to be popular to cut out the tier bit for those 14.
+// new codes use 7-10 bits per pokemon id dependent on a 2 bit variable
+// giving 1023 possible values, hopefully enough to handle 9 gens if needed.
+// emblem tiers are handled the same way for both
+function convertLegactyShareCode(code: string): string {
+	let values: number[] = [];
+	let bits = MIN_MON_BITS;
 	let convert = new B64Convert(code);
 	for(let i = 0; i < 10; i++) {
 		// compact tier into 1 bit of storage if bronze or special
@@ -522,21 +500,67 @@ function parseShareCode(code: string, futureCompat: boolean = false): string {
 		let monId = convert.readBits(7);
 		if(!monId) break;
 
-		if(!futureCompat && monId == 127) {
-			futureCompat = true;
-			--i;
-		} else {
-			let name: string;
-			if(!futureCompat && monId > 99) {
-				monId -= 100;
-				tier = (monId & 1) + 1;
-				name = likelyPopular[monId >> 1];
-			} else {
-				name = pkmnList[monId - 1].name;
-			}
-			if(rows) rows += '\n';
-			rows += tierNames[tier] + ' ' + name;
+		if(monId > 99) {
+			monId -= 100;
+			tier = (monId & 1) + 1;
+			monId = likelyPopularIds[monId >> 1];
 		}
+
+		while(monId > (1 << bits) - 1) bits++;
+
+		values.push(0x1000 | (tier << 10) | monId);
+	}
+
+	return createShareCodeImpl(values, bits);
+}
+
+function createShareCode(): string {
+	let values: number[] = [];
+	let bits = MIN_MON_BITS;
+	for(let emblem of activeEmblems) {
+		const monId = pkmnList.indexOf(pkmnByName.get(emblem.pokemonName)) + 1;
+		while(monId > (1 << bits) - 1) bits++;
+		values.push(monId | (emblem.grade << 10) | (emblem.count << 12));
+	}
+
+	return createShareCodeImpl(values, bits);
+}
+
+function createShareCodeImpl(values: number[], bits: number): string {
+	let convert = new B64Convert();
+	convert.writeBits(bits - MIN_MON_BITS, 2);
+	for(let value of values) {
+		// not bronze
+		let b1 = value & 0xC00 ? 1 : 0;
+
+		for(let i = value >> 12; i > 0; i--) {
+			// tier bits
+			convert.writeBits(b1, 1);
+			if(b1) convert.writeBits((value >> 11) & 1, 1);
+
+			convert.writeBits(value & 1023, bits);
+		}
+	}
+	return convert.endWrite();
+}
+
+function parseShareCode(code: string): string {
+	let rows = "";
+	let convert = new B64Convert(code);
+	const bitsPerMon = MIN_MON_BITS + convert.readBits(2);
+	for(let i = 0; i < 10; i++) {
+		// compact tier into 1 bit of storage if bronze
+		let tier = convert.readBits(1);
+		if(tier) tier += (convert.readBits(1));
+		// how long do you think it'll be before
+		// they add another tier and break all this?
+
+		let monId = convert.readBits(bitsPerMon);
+		if(!monId) break;
+
+		let name = pkmnList[monId - 1].name;
+		if(rows) rows += '\n';
+		rows += tierNames[tier] + ' ' + name;
 	}
 	return rows;
 }
@@ -548,7 +572,7 @@ function setActiveTab(tab: string, updateHash: boolean): void {
 	document.querySelector(".tab-content > .active")?.classList?.remove("active");
 	let sel = document.querySelectorAll(`[data-tab="${tab}"]`);
 	if(!sel.length) {
-		shareCode = tab;
+		shareCode = convertLegactyShareCode(tab);
 		sel = document.querySelectorAll('[data-tab="free"]');
 	}
 	sel.forEach(t => t.classList.add("active"));
@@ -777,7 +801,8 @@ function calcIdenticalStats(): void {
 
 function setup(): void {
 	// need falsy rather than nullsy
-	setActiveTab((document.location.hash || "#free").substring(1), false);
+	setActiveTab((window.location.hash || "#free").substring(1), false);
+	if(window.location.search) shareCode = window.location.search.substring(1);
 
 	document.querySelectorAll<HTMLElement>(".tab-list > *").forEach(
 		t => t.addEventListener("click", ev => setActiveTab(t.dataset.tab, true))
@@ -789,15 +814,10 @@ function setup(): void {
 	freeInp.addEventListener("keypress", ev => {
 		if(ev.key == "Enter") {
 			let txt = freeInp.value;
-			let idx = txt.indexOf('#');
-			let future = false;
-			if(idx == -1) {
-				idx = txt.indexOf('?');
-				future = idx != -1;
-			}
-			if(++idx < txt.length) {
+			let idx = txt.indexOf('?') + 1;
+			if(idx < txt.length) {
 				shareCode = txt.substring(idx);
-				freeArea.value = parseShareCode(shareCode, future);
+				freeArea.value = parseShareCode(shareCode);
 				createFromTextarea(freeArea);
 			}
 
@@ -807,7 +827,7 @@ function setup(): void {
 		navigator.clipboard.writeText(freeInp.value);
 	});
 
-	fetch("emblems_v2.json").then(r => r.json()).then(json => {
+	fetch("emblems.json").then(r => r.json()).then(json => {
 		pkmnList = json;
 		for(let pkmn of pkmnList) {
 			pkmnByName.set(pkmn.name, pkmn);

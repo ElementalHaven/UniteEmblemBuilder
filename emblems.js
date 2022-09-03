@@ -13,6 +13,7 @@ class Emblem {
 }
 class Filter {
 }
+const MIN_MON_BITS = 7;
 const BITS_PER_CHAR = 6;
 const BIT_CHAR_MASK = (1 << BITS_PER_CHAR) - 1;
 class B64Convert {
@@ -181,10 +182,8 @@ const ownershipFlags = 0b11000;
 var filterFlags = 0b11111;
 var filters = [new Filter(), new Filter()];
 var shareCode = null;
-const likelyPopular = [
-    "Arcanine", "Fearow", "Machamp", "Alakazam", "Venusaur",
-    "Rattata", "Pidgey", "Victreebel", "Gengar", "Beedrill",
-    "Rapidash", "Vileplume", "Venomoth"
+const likelyPopularIds = [
+    59, 22, 68, 65, 3, 19, 16, 71, 94, 15, 78, 45, 49
 ];
 function getComboEffect(color, count) {
     for (const combo of combos) {
@@ -396,7 +395,7 @@ function createFromTextarea(input) {
     activeEmblems = emblemsFromText(lines, maxEmblems);
     shareCode = createShareCode();
     tab.querySelector("input").value = shareCode.length == 0 ? "" :
-        "https://elementalhaven.github.io/UniteEmblemBuilder/#" + shareCode;
+        "https://elementalhaven.github.io/UniteEmblemBuilder/?" + shareCode;
     const effects = calculateResults();
     for (let effect of effects) {
         let tag = document.createElement("div");
@@ -407,27 +406,9 @@ function createFromTextarea(input) {
         output.append(tag);
     }
 }
-function createShareCode() {
-    let convert = new B64Convert();
-    for (let emblem of activeEmblems) {
-        let b1 = emblem.grade ? 1 : 0;
-        let popIdx = likelyPopular.indexOf(emblem.pokemonName);
-        let monId = pkmnList.indexOf(pkmnByName.get(emblem.pokemonName)) + 1;
-        if (b1 && popIdx != -1) {
-            b1 = 0;
-            monId = 99 + emblem.grade + (popIdx << 1);
-        }
-        for (let i = 0; i < emblem.count; i++) {
-            convert.writeBits(b1, 1);
-            if (b1)
-                convert.writeBits(emblem.grade - 1, 1);
-            convert.writeBits(monId, 7);
-        }
-    }
-    return convert.endWrite();
-}
-function parseShareCode(code, futureCompat = false) {
-    let rows = "";
+function convertLegactyShareCode(code) {
+    let values = [];
+    let bits = MIN_MON_BITS;
     let convert = new B64Convert(code);
     for (let i = 0; i < 10; i++) {
         let tier = convert.readBits(1);
@@ -436,24 +417,57 @@ function parseShareCode(code, futureCompat = false) {
         let monId = convert.readBits(7);
         if (!monId)
             break;
-        if (!futureCompat && monId == 127) {
-            futureCompat = true;
-            --i;
+        if (monId > 99) {
+            monId -= 100;
+            tier = (monId & 1) + 1;
+            monId = likelyPopularIds[monId >> 1];
         }
-        else {
-            let name;
-            if (!futureCompat && monId > 99) {
-                monId -= 100;
-                tier = (monId & 1) + 1;
-                name = likelyPopular[monId >> 1];
-            }
-            else {
-                name = pkmnList[monId - 1].name;
-            }
-            if (rows)
-                rows += '\n';
-            rows += tierNames[tier] + ' ' + name;
+        while (monId > (1 << bits) - 1)
+            bits++;
+        values.push(0x1000 | (tier << 10) | monId);
+    }
+    return createShareCodeImpl(values, bits);
+}
+function createShareCode() {
+    let values = [];
+    let bits = MIN_MON_BITS;
+    for (let emblem of activeEmblems) {
+        const monId = pkmnList.indexOf(pkmnByName.get(emblem.pokemonName)) + 1;
+        while (monId > (1 << bits) - 1)
+            bits++;
+        values.push(monId | (emblem.grade << 10) | (emblem.count << 12));
+    }
+    return createShareCodeImpl(values, bits);
+}
+function createShareCodeImpl(values, bits) {
+    let convert = new B64Convert();
+    convert.writeBits(bits - MIN_MON_BITS, 2);
+    for (let value of values) {
+        let b1 = value & 0xC00 ? 1 : 0;
+        for (let i = value >> 12; i > 0; i--) {
+            convert.writeBits(b1, 1);
+            if (b1)
+                convert.writeBits((value >> 11) & 1, 1);
+            convert.writeBits(value & 1023, bits);
         }
+    }
+    return convert.endWrite();
+}
+function parseShareCode(code) {
+    let rows = "";
+    let convert = new B64Convert(code);
+    const bitsPerMon = MIN_MON_BITS + convert.readBits(2);
+    for (let i = 0; i < 10; i++) {
+        let tier = convert.readBits(1);
+        if (tier)
+            tier += (convert.readBits(1));
+        let monId = convert.readBits(bitsPerMon);
+        if (!monId)
+            break;
+        let name = pkmnList[monId - 1].name;
+        if (rows)
+            rows += '\n';
+        rows += tierNames[tier] + ' ' + name;
     }
     return rows;
 }
@@ -463,7 +477,7 @@ function setActiveTab(tab, updateHash) {
     (_d = (_c = document.querySelector(".tab-content > .active")) === null || _c === void 0 ? void 0 : _c.classList) === null || _d === void 0 ? void 0 : _d.remove("active");
     let sel = document.querySelectorAll(`[data-tab="${tab}"]`);
     if (!sel.length) {
-        shareCode = tab;
+        shareCode = convertLegactyShareCode(tab);
         sel = document.querySelectorAll('[data-tab="free"]');
     }
     sel.forEach(t => t.classList.add("active"));
@@ -653,7 +667,9 @@ function calcIdenticalStats() {
     }
 }
 function setup() {
-    setActiveTab((document.location.hash || "#free").substring(1), false);
+    setActiveTab((window.location.hash || "#free").substring(1), false);
+    if (window.location.search)
+        shareCode = window.location.search.substring(1);
     document.querySelectorAll(".tab-list > *").forEach(t => t.addEventListener("click", ev => setActiveTab(t.dataset.tab, true)));
     const freeTab = document.querySelector(".tab-content [data-tab='free']");
     const freeArea = freeTab.querySelector("textarea");
@@ -661,15 +677,10 @@ function setup() {
     freeInp.addEventListener("keypress", ev => {
         if (ev.key == "Enter") {
             let txt = freeInp.value;
-            let idx = txt.indexOf('#');
-            let future = false;
-            if (idx == -1) {
-                idx = txt.indexOf('?');
-                future = idx != -1;
-            }
-            if (++idx < txt.length) {
+            let idx = txt.indexOf('?') + 1;
+            if (idx < txt.length) {
                 shareCode = txt.substring(idx);
-                freeArea.value = parseShareCode(shareCode, future);
+                freeArea.value = parseShareCode(shareCode);
                 createFromTextarea(freeArea);
             }
         }
@@ -677,7 +688,7 @@ function setup() {
     freeTab.querySelector("button").addEventListener("click", ev => {
         navigator.clipboard.writeText(freeInp.value);
     });
-    fetch("emblems_v2.json").then(r => r.json()).then(json => {
+    fetch("emblems.json").then(r => r.json()).then(json => {
         pkmnList = json;
         for (let pkmn of pkmnList) {
             pkmnByName.set(pkmn.name, pkmn);
