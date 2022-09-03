@@ -158,6 +158,12 @@ const combos = [
         startCount: 3,
         stat: "Hindrance Effect Duration",
         amount: 4
+    },
+    {
+        color: "Navy",
+        startCount: 3,
+        stat: "Unite Move Cooldown Reduction",
+        amount: 1
     }
 ];
 var activeEmblems;
@@ -167,7 +173,17 @@ const tierNames = ["Bronze", "Silver", "Gold"];
 const maxEmblems = 10;
 const statNames = [
     "HP", "Attack", "Defense", "Sp. Attack", "Sp. Defense",
-    "Speed", "Critical-Hit Rate"
+    "Speed", "Critical-Hit Rate", "Cooldown"
+];
+const statRates = [
+    [30, 40, 50],
+    [1.2, 1.6, 2],
+    [3, 4, 5],
+    [1.8, 2.4, 3],
+    [3, 4, 5],
+    [21, 28, 35],
+    [0.6, 0.8, 1],
+    [0.3, 0.4, 0.5]
 ];
 const ownershipFlags = 0b11000;
 var filterFlags = 0b11111;
@@ -368,9 +384,10 @@ function loadOwned(input) {
     let lines = input.value.split('\n');
     userEmblems = emblemsFromText(lines);
     let rows = document.querySelector("[data-tab='info'] table").tBodies[0].rows;
+    const idx = rows[0].cells.length - 1;
     for (let row of rows) {
         let count = (_b = (_a = getOwnedEmblem(row.cells[0])) === null || _a === void 0 ? void 0 : _a.count) !== null && _b !== void 0 ? _b : 0;
-        row.cells[10].innerText = count ? count.toString() : "";
+        row.cells[idx].innerText = count ? count.toString() : "";
     }
     let flags = filterFlags & ownershipFlags;
     if (flags && flags != ownershipFlags) {
@@ -460,6 +477,13 @@ function setActiveTab(tab, updateHash) {
     sel.forEach(t => t.classList.add("active"));
     if (updateHash)
         document.location.hash = tab;
+}
+function getStatValue2(stat, emblem, grade) {
+    if (emblem.negStat === stat)
+        return -grade;
+    if (emblem.posStat === stat)
+        return grade;
+    return 0;
 }
 function getStatValue(stat, grade) {
     var _a, _b;
@@ -679,7 +703,6 @@ function setup() {
         for (let pkmn of pkmnList) {
             pkmnByName.set(pkmn.name, pkmn);
         }
-        document.querySelector(".tab-content [data-tab='debug']").innerText = JSON.stringify(upconvert());
         calcIdenticalStats();
         setupInfoTable();
         if (shareCode) {
@@ -695,17 +718,5 @@ function setup() {
         }
         addTextareaEvents(myArea, loadOwned);
     });
-}
-function upconvert() {
-    let newList = [];
-    for (let pkmn of pkmnList) {
-        newList.push({
-            name: pkmn.name,
-            colors: pkmn.colors,
-            posStat: pkmn.grades[0].posEffect.stat,
-            negStat: pkmn.grades[0].negEffect.stat
-        });
-    }
-    return newList;
 }
 //# sourceMappingURL=emblems.js.map

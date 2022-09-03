@@ -192,6 +192,12 @@ const combos: ComboEffect[] = [
 		startCount: 3,
 		stat: "Hindrance Effect Duration",
 		amount: 4
+	},
+	{
+		color: "Navy",
+		startCount: 3,
+		stat: "Unite Move Cooldown Reduction",
+		amount: 1
 	}
 ]
 var activeEmblems: Emblem[];
@@ -201,7 +207,18 @@ const tierNames = ["Bronze", "Silver", "Gold"];
 const maxEmblems = 10;
 const statNames = [
 	"HP", "Attack", "Defense", "Sp. Attack", "Sp. Defense",
-	"Speed", "Critical-Hit Rate"
+	"Speed", "Critical-Hit Rate", "Cooldown"
+];
+const statRates = [
+	[30, 40, 50],
+	[1.2, 1.6, 2],
+	[3, 4, 5],
+	[1.8, 2.4, 3],
+	[3, 4, 5],
+	[21, 28, 35],
+	[0.6, 0.8, 1],
+	// guessed values. 1st is from an image. spreadsheet I used said 0.6, 0.8, 1
+	[0.3, 0.4, 0.5]
 ];
 const ownershipFlags = 0b11000;
 // I knew Java had this syntax, but was unaware of Javascript having it.
@@ -426,9 +443,11 @@ function loadOwned(input: HTMLTextAreaElement): void {
 	let rows = document.querySelector<HTMLTableElement>(
 		"[data-tab='info'] table").tBodies[0].rows;
 
+	// last column needs to be semi-dynamic for newly added stats
+	const idx = rows[0].cells.length - 1;
 	for(let row of rows) {
 		let count = getOwnedEmblem(row.cells[0])?.count ?? 0;
-		row.cells[10].innerText = count ? count.toString() : "";
+		row.cells[idx].innerText = count ? count.toString() : "";
 	}
 
 	let flags = filterFlags & ownershipFlags;
@@ -547,6 +566,12 @@ function setActiveTab(tab: string, updateHash: boolean): void {
 	if(updateHash) document.location.hash = tab;
 }
 
+function getStatValue2(stat: string, emblem: Pokemon2, grade: number): number {
+	if(emblem.negStat === stat) return -grade;
+	if(emblem.posStat === stat) return grade;
+	return 0;
+}
+
 function getStatValue(stat: string, grade: Grade): number {
 	if(grade.negEffect?.stat === stat) return grade.negEffect.amount;
 	if(grade.posEffect?.stat === stat) return grade.posEffect.amount;
@@ -591,14 +616,13 @@ function filterOut(row: HTMLTableRowElement): boolean {
 			} else if(pokemon.grades[0].negEffect.stat === filter.value) {
 				present = true;
 			}
-			// we want it to be present for all casese other than absent case
+			// we want it to be present for all cases other than absent case
 			if(present == (filter.compare == 1)) return true;
 			if(filter.compare == 2 && !pos) return true;
 			if(filter.compare == 3 && pos) return true;
 		}
 
 	}
-	// FIXME still need to check requirements if they're enabled
 
 	return false;
 }
@@ -812,9 +836,6 @@ function setup(): void {
 			pkmnByName.set(pkmn.name, pkmn);
 		}
 
-		document.querySelector<HTMLElement>(".tab-content [data-tab='debug']"
-		).innerText = JSON.stringify(upconvert());
-
 		calcIdenticalStats();
 		setupInfoTable();
 
@@ -832,19 +853,4 @@ function setup(): void {
 		}
 		addTextareaEvents(myArea, loadOwned);
 	});
-}
-
-// convert from the old format to the new format that acknowledges that
-// certain things are consistent across all grades, stats, and Pokemon
-function upconvert(): Pokemon2[] {
-	let newList: Pokemon2[] = [];
-	for(let pkmn of pkmnList) {
-		newList.push({
-			name: pkmn.name,
-			colors: pkmn.colors,
-			posStat: pkmn.grades[0].posEffect.stat,
-			negStat: pkmn.grades[0].negEffect.stat
-		});
-	}
-	return newList;
 }
