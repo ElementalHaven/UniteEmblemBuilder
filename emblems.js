@@ -173,7 +173,7 @@ const tierNames = ["Bronze", "Silver", "Gold"];
 const maxEmblems = 10;
 const statNames = [
     "HP", "Attack", "Defense", "Sp. Attack", "Sp. Defense",
-    "Speed", "Critical-Hit Rate", "Cooldown"
+    "Speed", "Critical-Hit Rate", "Cooldown Reduction"
 ];
 const statRates = [
     [30, 40, 50],
@@ -216,11 +216,12 @@ function getComboEffect(color, count) {
         return effect;
     }
 }
-function applyFlatEffect(effect, effects, multiplier = 1) {
+function applyFlatEffect(statName, grade, effects, multiplier = 1) {
     var _a;
-    let val = (_a = effects.get(effect.stat)) !== null && _a !== void 0 ? _a : 0;
-    val = ((val * 10 + effect.amount * 10) * multiplier) / 10;
-    effects.set(effect.stat, val);
+    let val = (_a = effects.get(statName)) !== null && _a !== void 0 ? _a : 0;
+    let change = statRates[statNames.indexOf(statName)][grade] * multiplier;
+    val = (val * 10 + change * 10) / 10;
+    effects.set(statName, val);
 }
 function calculateResults() {
     var _a;
@@ -229,9 +230,8 @@ function calculateResults() {
     for (let i = 0; i < activeEmblems.length; i++) {
         let emblem = activeEmblems[i];
         let pokemon = pkmnByName.get(emblem.pokemonName);
-        let grade = pokemon.grades[emblem.grade];
-        applyFlatEffect(grade.posEffect, effects, emblem.count);
-        applyFlatEffect(grade.negEffect, effects, emblem.count);
+        applyFlatEffect(pokemon.posStat, emblem.grade, effects, emblem.count);
+        applyFlatEffect(pokemon.negStat, emblem.grade, effects, -emblem.count);
         let applyColors = true;
         for (let j = 0; j < i; j++) {
             if (activeEmblems[j].pokemonName == emblem.pokemonName) {
@@ -478,23 +478,15 @@ function setActiveTab(tab, updateHash) {
     if (updateHash)
         document.location.hash = tab;
 }
-function getStatValue2(stat, emblem, grade) {
+function getStatValue(stat, emblem, grade) {
     if (emblem.negStat === stat)
         return -grade;
     if (emblem.posStat === stat)
         return grade;
     return 0;
 }
-function getStatValue(stat, grade) {
-    var _a, _b;
-    if (((_a = grade.negEffect) === null || _a === void 0 ? void 0 : _a.stat) === stat)
-        return grade.negEffect.amount;
-    if (((_b = grade.posEffect) === null || _b === void 0 ? void 0 : _b.stat) === stat)
-        return grade.posEffect.amount;
-    return 0;
-}
 function formatStat(stat, val) {
-    let dec = (stat.includes("Attack") || stat.includes("Critical")) ? 1 : 0;
+    let dec = (stat.includes("Attack") || stat.includes("Critical") || stat.includes("Cooldown")) ? 1 : 0;
     return (val > 0 ? '+' : "") + val.toFixed(dec);
 }
 function filterOut(row) {
@@ -522,11 +514,11 @@ function filterOut(row) {
         else {
             let present = false;
             let pos = false;
-            if (pokemon.grades[0].posEffect.stat === filter.value) {
+            if (pokemon.posStat === filter.value) {
                 present = true;
                 pos = true;
             }
-            else if (pokemon.grades[0].negEffect.stat === filter.value) {
+            else if (pokemon.negStat === filter.value) {
                 present = true;
             }
             if (present == (filter.compare == 1))
@@ -596,15 +588,15 @@ function setupInfoTable() {
         createTag("th", "Owned", row);
     }
     for (let pokemon of pkmnList) {
-        for (let tier in pokemon.grades) {
-            let grade = pokemon.grades[tier];
+        for (let tier = 0; tier < tierNames.length; tier++) {
             let row = tbl.tBodies[0].insertRow();
             let cell = row.insertCell();
             cell.innerText = pokemon.name;
             cell.classList.add(tierNames[tier]);
-            for (let stat of statNames) {
+            for (let idx in statNames) {
+                const stat = statNames[idx];
                 cell = row.insertCell();
-                let val = getStatValue(stat, grade);
+                let val = getStatValue(stat, pokemon, statRates[idx][tier]);
                 if (val) {
                     cell.innerText = formatStat(stat, val);
                     cell.classList.add("number");
@@ -661,12 +653,10 @@ function calcIdenticalStats() {
     for (let i = 0; i < count; i++) {
         let pokemon = pkmnList[i];
         pokemon.sameStats = [];
-        let a = pokemon.grades[0];
         for (let j = 0; j < i; j++) {
             let other = pkmnList[j];
-            let b = other.grades[0];
-            if (effectMatches(a.posEffect, b.posEffect)
-                && effectMatches(a.negEffect, b.negEffect)) {
+            if (pokemon.posStat == other.posStat
+                && pokemon.negStat == other.negStat) {
                 pokemon.sameStats.push(other.name);
                 other.sameStats.push(pokemon.name);
             }
@@ -698,7 +688,7 @@ function setup() {
     freeTab.querySelector("button").addEventListener("click", ev => {
         navigator.clipboard.writeText(freeInp.value);
     });
-    fetch("emblems.json").then(r => r.json()).then(json => {
+    fetch("emblems_v2.json").then(r => r.json()).then(json => {
         pkmnList = json;
         for (let pkmn of pkmnList) {
             pkmnByName.set(pkmn.name, pkmn);

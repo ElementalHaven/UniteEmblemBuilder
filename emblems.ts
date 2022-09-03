@@ -136,8 +136,8 @@ class B64Convert {
 
 //#region global variables
 
-var pkmnList: Pokemon[];
-const pkmnByName: Map<string, Pokemon> = new Map();
+var pkmnList: Pokemon2[];
+const pkmnByName: Map<string, Pokemon2> = new Map();
 const combos: ComboEffect[] = [
 	{
 		color: "Green",
@@ -207,7 +207,7 @@ const tierNames = ["Bronze", "Silver", "Gold"];
 const maxEmblems = 10;
 const statNames = [
 	"HP", "Attack", "Defense", "Sp. Attack", "Sp. Defense",
-	"Speed", "Critical-Hit Rate", "Cooldown"
+	"Speed", "Critical-Hit Rate", "Cooldown Reduction"
 ];
 const statRates = [
 	[30, 40, 50],
@@ -253,14 +253,16 @@ function getComboEffect(color: string, count: number): ResultingEffect {
 }
 
 function applyFlatEffect(
-	effect: Effect,
+	statName: string,
+	grade: number,
 	effects: Map<string, number>,
 	multiplier: number = 1
 ): void {
-	let val = effects.get(effect.stat) ?? 0;
+	let val = effects.get(statName) ?? 0;
+	let change = statRates[statNames.indexOf(statName)][grade] * multiplier;
 	// increase values so it ends up as integer math temporarily(hopefully)
-	val = ((val * 10 + effect.amount * 10) * multiplier) / 10;
-	effects.set(effect.stat, val);
+	val = (val * 10 + change * 10) / 10;
+	effects.set(statName, val);
 }
 
 function calculateResults(): ResultingEffect[] {
@@ -269,10 +271,9 @@ function calculateResults(): ResultingEffect[] {
 	for(let i = 0; i < activeEmblems.length; i++) {
 		let emblem = activeEmblems[i];
 		let pokemon = pkmnByName.get(emblem.pokemonName);
-		let grade = pokemon.grades[emblem.grade];
 
-		applyFlatEffect(grade.posEffect, effects, emblem.count);
-		applyFlatEffect(grade.negEffect, effects, emblem.count);
+		applyFlatEffect(pokemon.posStat, emblem.grade, effects, emblem.count);
+		applyFlatEffect(pokemon.negStat, emblem.grade, effects, -emblem.count);
 
 		let applyColors = true;
 		for(let j = 0; j < i; j++) {
@@ -566,20 +567,14 @@ function setActiveTab(tab: string, updateHash: boolean): void {
 	if(updateHash) document.location.hash = tab;
 }
 
-function getStatValue2(stat: string, emblem: Pokemon2, grade: number): number {
+function getStatValue(stat: string, emblem: Pokemon2, grade: number): number {
 	if(emblem.negStat === stat) return -grade;
 	if(emblem.posStat === stat) return grade;
 	return 0;
 }
 
-function getStatValue(stat: string, grade: Grade): number {
-	if(grade.negEffect?.stat === stat) return grade.negEffect.amount;
-	if(grade.posEffect?.stat === stat) return grade.posEffect.amount;
-	return 0;
-}
-
 function formatStat(stat: string, val: number) {
-	let dec = (stat.includes("Attack") || stat.includes("Critical")) ? 1 : 0;
+	let dec = (stat.includes("Attack") || stat.includes("Critical") || stat.includes("Cooldown")) ? 1 : 0;
 	return (val > 0 ? '+' : "") + val.toFixed(dec);
 }
 
@@ -610,10 +605,10 @@ function filterOut(row: HTMLTableRowElement): boolean {
 		} else {
 			let present = false;
 			let pos = false;
-			if(pokemon.grades[0].posEffect.stat === filter.value) {
+			if(pokemon.posStat === filter.value) {
 				present = true;
 				pos = true;
-			} else if(pokemon.grades[0].negEffect.stat === filter.value) {
+			} else if(pokemon.negStat === filter.value) {
 				present = true;
 			}
 			// we want it to be present for all cases other than absent case
@@ -701,8 +696,7 @@ function setupInfoTable(): void {
 
 	// rows for each pokemon
 	for(let pokemon of pkmnList) {
-		for(let tier in pokemon.grades) {
-			let grade = pokemon.grades[tier];
+		for(let tier = 0; tier < tierNames.length; tier++) {
 			// MDN's documentation of HTMLTableElement.insertRow() is full of shit
 			let row = tbl.tBodies[0].insertRow();
 
@@ -712,9 +706,10 @@ function setupInfoTable(): void {
 			cell.classList.add(tierNames[tier]);
 
 			// stats
-			for(let stat of statNames) {
+			for(let idx in statNames) {
+				const stat = statNames[idx];
 				cell = row.insertCell();
-				let val = getStatValue(stat, grade);
+				let val = getStatValue(stat, pokemon, statRates[idx][tier]);
 				if(val) {
 					cell.innerText = formatStat(stat, val);
 					cell.classList.add("number");
@@ -784,12 +779,10 @@ function calcIdenticalStats(): void {
 	for(let i = 0; i < count; i++) {
 		let pokemon = pkmnList[i];
 		pokemon.sameStats = [];
-		let a = pokemon.grades[0];
 		for(let j = 0; j < i; j++) {
 			let other = pkmnList[j];
-			let b = other.grades[0];
-			if(effectMatches(a.posEffect, b.posEffect)
-				&& effectMatches(a.negEffect, b.negEffect)
+			if(pokemon.posStat == other.posStat 
+				&& pokemon.negStat == other.negStat
 			) {
 				pokemon.sameStats.push(other.name);
 				other.sameStats.push(pokemon.name);
@@ -830,7 +823,7 @@ function setup(): void {
 		navigator.clipboard.writeText(freeInp.value);
 	});
 
-	fetch("emblems.json").then(r => r.json()).then(json => {
+	fetch("emblems_v2.json").then(r => r.json()).then(json => {
 		pkmnList = json;
 		for(let pkmn of pkmnList) {
 			pkmnByName.set(pkmn.name, pkmn);

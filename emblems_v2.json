@@ -896,13 +896,13 @@
 	{
 		"name": "Mewtwo",
 		"colors": [ "Purple" ],
-		"posStat": "Cooldown",
+		"posStat": "Cooldown Reduction",
 		"negStat": "HP"
 	},
 	{
 		"name": "Mew",
 		"colors": [ "Purple" ],
-		"posStat": "Cooldown",
+		"posStat": "Cooldown Reduction",
 		"negStat": "HP"
 	}
 ]
