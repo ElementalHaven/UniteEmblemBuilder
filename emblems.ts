@@ -366,7 +366,7 @@ function parseEmblem(line: string): Emblem {
 }
 
 function emblemsFromText(lines: string[], limit?: number): Emblem[] {
-	limit ??= 2970; // 3 tiers * 99 pokemon * 10 slots
+	limit ??= 7500; // 3 tiers * 250 pokemon * 10 slots
 	let emblems: Emblem[] = [];
 	let count = 0;
 	for(let line of lines) {

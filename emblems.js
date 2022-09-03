@@ -313,7 +313,7 @@ function parseEmblem(line) {
     return emblem;
 }
 function emblemsFromText(lines, limit) {
-    limit !== null && limit !== void 0 ? limit : (limit = 2970);
+    limit !== null && limit !== void 0 ? limit : (limit = 7500);
     let emblems = [];
     let count = 0;
     for (let line of lines) {

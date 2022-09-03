@@ -835,19 +835,19 @@
 	},
 	{
 		"name": "Kabuto",
-		"colors": [ "Brown" ],
+		"colors": [ "Orange" ],
 		"posStat": "Critical-Hit Rate",
 		"negStat": "HP"
 	},
 	{
 		"name": "Kabutops",
-		"colors": [ "Brown", "White" ],
+		"colors": [ "Orange", "White" ],
 		"posStat": "Critical-Hit Rate",
 		"negStat": "Sp. Attack"
 	},
 	{
 		"name": "Aerodactyl",
-		"colors": [ "Brown", "White" ],
+		"colors": [ "Orange", "White" ],
 		"posStat": "Speed",
 		"negStat": "Defense"
 	},
