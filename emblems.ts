@@ -2,13 +2,6 @@
 
 class Pokemon {
 	name: string;
-	grades: Grade[] = [];
-	colors: string[] = [];
-	sameStats?: string[];
-}
-
-class Pokemon2 {
-	name: string;
 	posStat: string;
 	negStat: string;
 	colors: string[] = [];
@@ -28,11 +21,6 @@ class ResultingEffect extends Effect {
 class ComboEffect extends Effect {
 	color: string;
 	startCount: number;
-}
-
-class Grade {
-	posEffect: Effect;
-	negEffect: Effect;
 }
 
 class Emblem {
@@ -136,8 +124,8 @@ class B64Convert {
 
 //#region global variables
 
-var pkmnList: Pokemon2[];
-const pkmnByName: Map<string, Pokemon2> = new Map();
+var pkmnList: Pokemon[];
+const pkmnByName: Map<string, Pokemon> = new Map();
 const combos: ComboEffect[] = [
 	{
 		color: "Green",
@@ -567,7 +555,7 @@ function setActiveTab(tab: string, updateHash: boolean): void {
 	if(updateHash) document.location.hash = tab;
 }
 
-function getStatValue(stat: string, emblem: Pokemon2, grade: number): number {
+function getStatValue(stat: string, emblem: Pokemon, grade: number): number {
 	if(emblem.negStat === stat) return -grade;
 	if(emblem.posStat === stat) return grade;
 	return 0;
@@ -767,10 +755,6 @@ function setupFilters(tab: Element) {
 		});
 		filter.compare = selects[1].selectedIndex;
 	}
-}
-
-function effectMatches(a: Effect, b: Effect) {
-	return a.amount == b.amount && a.stat === b.stat;
 }
 
 function calcIdenticalStats(): void {

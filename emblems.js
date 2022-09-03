@@ -1,11 +1,5 @@
 class Pokemon {
     constructor() {
-        this.grades = [];
-        this.colors = [];
-    }
-}
-class Pokemon2 {
-    constructor() {
         this.colors = [];
     }
 }
@@ -14,8 +8,6 @@ class Effect {
 class ResultingEffect extends Effect {
 }
 class ComboEffect extends Effect {
-}
-class Grade {
 }
 class Emblem {
 }
@@ -644,9 +636,6 @@ function setupFilters(tab) {
         });
         filter.compare = selects[1].selectedIndex;
     }
-}
-function effectMatches(a, b) {
-    return a.amount == b.amount && a.stat === b.stat;
 }
 function calcIdenticalStats() {
     const count = pkmnList.length;
