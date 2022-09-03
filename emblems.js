@@ -4,6 +4,11 @@ class Pokemon {
         this.colors = [];
     }
 }
+class Pokemon2 {
+    constructor() {
+        this.colors = [];
+    }
+}
 class Effect {
 }
 class ResultingEffect extends Effect {
@@ -674,6 +679,7 @@ function setup() {
         for (let pkmn of pkmnList) {
             pkmnByName.set(pkmn.name, pkmn);
         }
+        document.querySelector(".tab-content [data-tab='debug']").innerText = JSON.stringify(upconvert());
         calcIdenticalStats();
         setupInfoTable();
         if (shareCode) {
@@ -689,5 +695,17 @@ function setup() {
         }
         addTextareaEvents(myArea, loadOwned);
     });
+}
+function upconvert() {
+    let newList = [];
+    for (let pkmn of pkmnList) {
+        newList.push({
+            name: pkmn.name,
+            colors: pkmn.colors,
+            posStat: pkmn.grades[0].posEffect.stat,
+            negStat: pkmn.grades[0].negEffect.stat
+        });
+    }
+    return newList;
 }
 //# sourceMappingURL=emblems.js.map

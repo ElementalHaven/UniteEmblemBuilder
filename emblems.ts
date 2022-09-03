@@ -7,6 +7,14 @@ class Pokemon {
 	sameStats?: string[];
 }
 
+class Pokemon2 {
+	name: string;
+	posStat: string;
+	negStat: string;
+	colors: string[] = [];
+	sameStats?: string[];
+}
+
 class Effect {
 	stat: string;
 	amount: number;
@@ -804,6 +812,9 @@ function setup(): void {
 			pkmnByName.set(pkmn.name, pkmn);
 		}
 
+		document.querySelector<HTMLElement>(".tab-content [data-tab='debug']"
+		).innerText = JSON.stringify(upconvert());
+
 		calcIdenticalStats();
 		setupInfoTable();
 
@@ -820,6 +831,20 @@ function setup(): void {
 			}
 		}
 		addTextareaEvents(myArea, loadOwned);
-		
 	});
+}
+
+// convert from the old format to the new format that acknowledges that
+// certain things are consistent across all grades, stats, and Pokemon
+function upconvert(): Pokemon2[] {
+	let newList: Pokemon2[] = [];
+	for(let pkmn of pkmnList) {
+		newList.push({
+			name: pkmn.name,
+			colors: pkmn.colors,
+			posStat: pkmn.grades[0].posEffect.stat,
+			negStat: pkmn.grades[0].negEffect.stat
+		});
+	}
+	return newList;
 }

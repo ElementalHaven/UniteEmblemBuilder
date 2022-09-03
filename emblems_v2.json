@@ -1,0 +1,596 @@
+﻿[
+	{
+		"name": "Bulbasaur",
+		"colors": [ "Green" ],
+		"posStat": "Sp. Attack",
+		"negStat": "HP"
+	},
+	{
+		"name": "Ivysaur",
+		"colors": [ "Green" ],
+		"posStat": "Sp. Attack",
+		"negStat": "Defense"
+	},
+	{
+		"name": "Venusaur",
+		"colors": [ "Green" ],
+		"posStat": "Sp. Attack",
+		"negStat": "Attack"
+	},
+	{
+		"name": "Charmander",
+		"colors": [ "Red" ],
+		"posStat": "HP",
+		"negStat": "Attack"
+	},
+	{
+		"name": "Charmeleon",
+		"colors": [ "Red" ],
+		"posStat": "HP",
+		"negStat": "Sp. Defense"
+	},
+	{
+		"name": "Charizard",
+		"colors": [ "Red" ],
+		"posStat": "HP",
+		"negStat": "Defense"
+	},
+	{
+		"name": "Squirtle",
+		"colors": [ "Blue" ],
+		"posStat": "Sp. Attack",
+		"negStat": "HP"
+	},
+	{
+		"name": "Wartortle",
+		"colors": [ "Blue" ],
+		"posStat": "Sp. Attack",
+		"negStat": "Defense"
+	},
+	{
+		"name": "Blastoise",
+		"colors": [ "Blue" ],
+		"posStat": "Sp. Attack",
+		"negStat": "Critical-Hit Rate"
+	},
+	{
+		"name": "Caterpie",
+		"colors": [ "Green" ],
+		"posStat": "Defense",
+		"negStat": "HP"
+	},
+	{
+		"name": "Metapod",
+		"colors": [ "Green" ],
+		"posStat": "Defense",
+		"negStat": "Speed"
+	},
+	{
+		"name": "Butterfree",
+		"colors": [ "Green", "White" ],
+		"posStat": "Defense",
+		"negStat": "Attack"
+	},
+	{
+		"name": "Weedle",
+		"colors": [ "Green" ],
+		"posStat": "Sp. Defense",
+		"negStat": "Defense"
+	},
+	{
+		"name": "Kakuna",
+		"colors": [ "Green" ],
+		"posStat": "Sp. Defense",
+		"negStat": "Speed"
+	},
+	{
+		"name": "Beedrill",
+		"colors": [ "Green", "Black" ],
+		"posStat": "Sp. Defense",
+		"negStat": "HP"
+	},
+	{
+		"name": "Pidgey",
+		"colors": [ "White" ],
+		"posStat": "HP",
+		"negStat": "Defense"
+	},
+	{
+		"name": "Pidgeotto",
+		"colors": [ "White" ],
+		"posStat": "HP",
+		"negStat": "Sp. Defense"
+	},
+	{
+		"name": "Pidgeot",
+		"colors": [ "White" ],
+		"posStat": "HP",
+		"negStat": "Sp. Attack"
+	},
+	{
+		"name": "Rattata",
+		"colors": [ "White" ],
+		"posStat": "Defense",
+		"negStat": "HP"
+	},
+	{
+		"name": "Raticate",
+		"colors": [ "White" ],
+		"posStat": "Defense",
+		"negStat": "Sp. Attack"
+	},
+	{
+		"name": "Spearow",
+		"colors": [ "White" ],
+		"posStat": "Attack",
+		"negStat": "Sp. Defense"
+	},
+	{
+		"name": "Fearow",
+		"colors": [ "White" ],
+		"posStat": "Attack",
+		"negStat": "Sp. Attack"
+	},
+	{
+		"name": "Ekans",
+		"colors": [ "Black" ],
+		"posStat": "Attack",
+		"negStat": "Defense"
+	},
+	{
+		"name": "Arbok",
+		"colors": [ "Black" ],
+		"posStat": "Attack",
+		"negStat": "Sp. Defense"
+	},
+	{
+		"name": "Pikachu",
+		"colors": [ "Yellow" ],
+		"posStat": "Sp. Defense",
+		"negStat": "Critical-Hit Rate"
+	},
+	{
+		"name": "Raichu",
+		"colors": [ "Yellow" ],
+		"posStat": "Sp. Defense",
+		"negStat": "HP"
+	},
+	{
+		"name": "Sandshrew",
+		"colors": [ "Orange" ],
+		"posStat": "Critical-Hit Rate",
+		"negStat": "Sp. Defense"
+	},
+	{
+		"name": "Sandslash",
+		"colors": [ "Orange" ],
+		"posStat": "Critical-Hit Rate",
+		"negStat": "Sp. Attack"
+	},
+	{
+		"name": "Nidoran♀",
+		"colors": [ "Purple" ],
+		"posStat": "HP",
+		"negStat": "Sp. Defense"
+	},
+	{
+		"name": "Nidorina",
+		"colors": [ "Purple" ],
+		"posStat": "HP",
+		"negStat": "Defense"
+	},
+	{
+		"name": "Nidoqueen",
+		"colors": [ "Purple", "Orange" ],
+		"posStat": "HP",
+		"negStat": "Sp. Attack"
+	},
+	{
+		"name": "Nidoran♂",
+		"colors": [ "Purple" ],
+		"posStat": "Attack",
+		"negStat": "HP"
+	},
+	{
+		"name": "Nidorino",
+		"colors": [ "Purple" ],
+		"posStat": "Attack",
+		"negStat": "Sp. Defense"
+	},
+	{
+		"name": "Nidoking",
+		"colors": [ "Purple", "Orange" ],
+		"posStat": "Attack",
+		"negStat": "Defense"
+	},
+	{
+		"name": "Clefairy",
+		"colors": [ "Pink" ],
+		"posStat": "HP",
+		"negStat": "Defense"
+	},
+	{
+		"name": "Clefable",
+		"colors": [ "Pink" ],
+		"posStat": "HP",
+		"negStat": "Speed"
+	},
+	{
+		"name": "Vulpix",
+		"colors": [ "Red" ],
+		"posStat": "Sp. Defense",
+		"negStat": "HP"
+	},
+	{
+		"name": "Ninetales",
+		"colors": [ "Red" ],
+		"posStat": "Sp. Defense",
+		"negStat": "Attack"
+	},
+	{
+		"name": "Jigglypuff",
+		"colors": [ "Pink" ],
+		"posStat": "HP",
+		"negStat": "Sp. Defense"
+	},
+	{
+		"name": "Wigglytuff",
+		"colors": [ "Pink" ],
+		"posStat": "HP",
+		"negStat": "Speed"
+	},
+	{
+		"name": "Zubat",
+		"colors": [ "Black" ],
+		"posStat": "Speed",
+		"negStat": "Attack"
+	},
+	{
+		"name": "Golbat",
+		"colors": [ "Black" ],
+		"posStat": "Speed",
+		"negStat": "Sp. Defense"
+	},
+	{
+		"name": "Oddish",
+		"colors": [ "Green" ],
+		"posStat": "HP",
+		"negStat": "Speed"
+	},
+	{
+		"name": "Gloom",
+		"colors": [ "Green" ],
+		"posStat": "HP",
+		"negStat": "Defense"
+	},
+	{
+		"name": "Vileplume",
+		"colors": [ "Green", "Black" ],
+		"posStat": "HP",
+		"negStat": "Attack"
+	},
+	{
+		"name": "Paras",
+		"colors": [ "Green" ],
+		"posStat": "Defense",
+		"negStat": "Critical-Hit Rate"
+	},
+	{
+		"name": "Parasect",
+		"colors": [ "Green" ],
+		"posStat": "Defense",
+		"negStat": "Sp. Attack"
+	},
+	{
+		"name": "Venonat",
+		"colors": [ "Green" ],
+		"posStat": "HP",
+		"negStat": "Attack"
+	},
+	{
+		"name": "Venomoth",
+		"colors": [ "Green", "Black" ],
+		"posStat": "HP",
+		"negStat": "Critical-Hit Rate"
+	},
+	{
+		"name": "Diglett",
+		"colors": [ "Orange" ],
+		"posStat": "Speed",
+		"negStat": "HP"
+	},
+	{
+		"name": "Dugtrio",
+		"colors": [ "Orange" ],
+		"posStat": "Speed",
+		"negStat": "Defense"
+	},
+	{
+		"name": "Meowth",
+		"colors": [ "White" ],
+		"posStat": "Critical-Hit Rate",
+		"negStat": "Defense"
+	},
+	{
+		"name": "Persian",
+		"colors": [ "White" ],
+		"posStat": "Critical-Hit Rate",
+		"negStat": "Defense"
+	},
+	{
+		"name": "Psyduck",
+		"colors": [ "Blue" ],
+		"posStat": "Sp. Defense",
+		"negStat": "HP"
+	},
+	{
+		"name": "Golduck",
+		"colors": [ "Blue" ],
+		"posStat": "Sp. Defense",
+		"negStat": "Attack"
+	},
+	{
+		"name": "Mankey",
+		"colors": [ "Orange" ],
+		"posStat": "HP",
+		"negStat": "Defense"
+	},
+	{
+		"name": "Primeape",
+		"colors": [ "Orange" ],
+		"posStat": "HP",
+		"negStat": "Sp. Attack"
+	},
+	{
+		"name": "Growlithe",
+		"colors": [ "Red" ],
+		"posStat": "Sp. Attack",
+		"negStat": "Sp. Defense"
+	},
+	{
+		"name": "Arcanine",
+		"colors": [ "Red" ],
+		"posStat": "Sp. Attack",
+		"negStat": "Attack"
+	},
+	{
+		"name": "Poliwag",
+		"colors": [ "Blue" ],
+		"posStat": "Sp. Defense",
+		"negStat": "Defense"
+	},
+	{
+		"name": "Poliwhirl",
+		"colors": [ "Blue" ],
+		"posStat": "Sp. Defense",
+		"negStat": "HP"
+	},
+	{
+		"name": "Poliwrath",
+		"colors": [ "Blue", "Orange" ],
+		"posStat": "Sp. Defense",
+		"negStat": "Sp. Attack"
+	},
+	{
+		"name": "Abra",
+		"colors": [ "Purple" ],
+		"posStat": "Sp. Attack",
+		"negStat": "HP"
+	},
+	{
+		"name": "Kadabra",
+		"colors": [ "Purple" ],
+		"posStat": "Sp. Attack",
+		"negStat": "Critical-Hit Rate"
+	},
+	{
+		"name": "Alakazam",
+		"colors": [ "Purple" ],
+		"posStat": "Sp. Attack",
+		"negStat": "Attack"
+	},
+	{
+		"name": "Machop",
+		"colors": [ "Orange" ],
+		"posStat": "Attack",
+		"negStat": "Speed"
+	},
+	{
+		"name": "Machoke",
+		"colors": [ "Orange" ],
+		"posStat": "Attack",
+		"negStat": "Sp. Defense"
+	},
+	{
+		"name": "Machamp",
+		"colors": [ "Orange" ],
+		"posStat": "Attack",
+		"negStat": "Sp. Attack"
+	},
+	{
+		"name": "Bellsprout",
+		"colors": [ "Green" ],
+		"posStat": "Attack",
+		"negStat": "Defense"
+	},
+	{
+		"name": "Weepinbell",
+		"colors": [ "Green" ],
+		"posStat": "Attack",
+		"negStat": "HP"
+	},
+	{
+		"name": "Victreebel",
+		"colors": [ "Green", "Black" ],
+		"posStat": "Attack",
+		"negStat": "Sp. Defense"
+	},
+	{
+		"name": "Tentacool",
+		"colors": [ "Blue" ],
+		"posStat": "Sp. Defense",
+		"negStat": "HP"
+	},
+	{
+		"name": "Tentacruel",
+		"colors": [ "Blue", "Black" ],
+		"posStat": "Sp. Defense",
+		"negStat": "Critical-Hit Rate"
+	},
+	{
+		"name": "Geodude",
+		"colors": [ "Orange" ],
+		"posStat": "Defense",
+		"negStat": "Sp. Defense"
+	},
+	{
+		"name": "Graveler",
+		"colors": [ "Orange" ],
+		"posStat": "Defense",
+		"negStat": "Critical-Hit Rate"
+	},
+	{
+		"name": "Golem",
+		"colors": [ "Orange" ],
+		"posStat": "Defense",
+		"negStat": "Sp. Attack"
+	},
+	{
+		"name": "Ponyta",
+		"colors": [ "Red" ],
+		"posStat": "Attack",
+		"negStat": "HP"
+	},
+	{
+		"name": "Rapidash",
+		"colors": [ "Red" ],
+		"posStat": "Attack",
+		"negStat": "Defense"
+	},
+	{
+		"name": "Slowpoke",
+		"colors": [ "Blue" ],
+		"posStat": "Defense",
+		"negStat": "Speed"
+	},
+	{
+		"name": "Slowbro",
+		"colors": [ "Blue", "Purple" ],
+		"posStat": "Defense",
+		"negStat": "Speed"
+	},
+	{
+		"name": "Magnemite",
+		"colors": [ "Yellow" ],
+		"posStat": "Defense",
+		"negStat": "HP"
+	},
+	{
+		"name": "Magneton",
+		"colors": [ "Yellow" ],
+		"posStat": "Defense",
+		"negStat": "Attack"
+	},
+	{
+		"name": "Farfetch'd",
+		"colors": [ "White" ],
+		"posStat": "Critical-Hit Rate",
+		"negStat": "HP"
+	},
+	{
+		"name": "Doduo",
+		"colors": [ "White" ],
+		"posStat": "Speed",
+		"negStat": "HP"
+	},
+	{
+		"name": "Dodrio",
+		"colors": [ "White" ],
+		"posStat": "Speed",
+		"negStat": "HP"
+	},
+	{
+		"name": "Seel",
+		"colors": [ "Blue" ],
+		"posStat": "HP",
+		"negStat": "Attack"
+	},
+	{
+		"name": "Dewgong",
+		"colors": [ "Blue" ],
+		"posStat": "HP",
+		"negStat": "Sp. Attack"
+	},
+	{
+		"name": "Grimer",
+		"colors": [ "Black" ],
+		"posStat": "HP",
+		"negStat": "Attack"
+	},
+	{
+		"name": "Muk",
+		"colors": [ "Black" ],
+		"posStat": "HP",
+		"negStat": "Sp. Attack"
+	},
+	{
+		"name": "Shellder",
+		"colors": [ "Blue" ],
+		"posStat": "Defense",
+		"negStat": "HP"
+	},
+	{
+		"name": "Cloyster",
+		"colors": [ "Blue" ],
+		"posStat": "Defense",
+		"negStat": "Sp. Defense"
+	},
+	{
+		"name": "Gastly",
+		"colors": [ "Purple" ],
+		"posStat": "Speed",
+		"negStat": "HP"
+	},
+	{
+		"name": "Haunter",
+		"colors": [ "Purple" ],
+		"posStat": "Speed",
+		"negStat": "Defense"
+	},
+	{
+		"name": "Gengar",
+		"colors": [ "Purple", "Black" ],
+		"posStat": "Speed",
+		"negStat": "Attack"
+	},
+	{
+		"name": "Onix",
+		"colors": [ "Orange" ],
+		"posStat": "Defense",
+		"negStat": "HP"
+	},
+	{
+		"name": "Drowzee",
+		"colors": [ "Purple" ],
+		"posStat": "Sp. Defense",
+		"negStat": "Speed"
+	},
+	{
+		"name": "Hypno",
+		"colors": [ "Purple" ],
+		"posStat": "Sp. Defense",
+		"negStat": "Critical-Hit Rate"
+	},
+	{
+		"name": "Krabby",
+		"colors": [ "Blue" ],
+		"posStat": "Attack",
+		"negStat": "HP"
+	},
+	{
+		"name": "Kingler",
+		"colors": [ "Blue" ],
+		"posStat": "Attack",
+		"negStat": "Sp. Defense"
+	}
+]
