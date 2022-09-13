@@ -135,7 +135,7 @@ const combos = [
         amount: 2
     },
     {
-        color: "Orange",
+        color: "Brown",
         startCount: 2,
         stat: "Attack",
         amount: 1

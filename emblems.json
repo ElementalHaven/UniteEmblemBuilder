@@ -157,13 +157,13 @@
 	},
 	{
 		"name": "Sandshrew",
-		"colors": [ "Orange" ],
+		"colors": [ "Brown" ],
 		"posStat": "Critical-Hit Rate",
 		"negStat": "Sp. Defense"
 	},
 	{
 		"name": "Sandslash",
-		"colors": [ "Orange" ],
+		"colors": [ "Brown" ],
 		"posStat": "Critical-Hit Rate",
 		"negStat": "Sp. Attack"
 	},
@@ -181,7 +181,7 @@
 	},
 	{
 		"name": "Nidoqueen",
-		"colors": [ "Purple", "Orange" ],
+		"colors": [ "Purple", "Brown" ],
 		"posStat": "HP",
 		"negStat": "Sp. Attack"
 	},
@@ -199,7 +199,7 @@
 	},
 	{
 		"name": "Nidoking",
-		"colors": [ "Purple", "Orange" ],
+		"colors": [ "Purple", "Brown" ],
 		"posStat": "Attack",
 		"negStat": "Defense"
 	},
@@ -295,13 +295,13 @@
 	},
 	{
 		"name": "Diglett",
-		"colors": [ "Orange" ],
+		"colors": [ "Brown" ],
 		"posStat": "Speed",
 		"negStat": "HP"
 	},
 	{
 		"name": "Dugtrio",
-		"colors": [ "Orange" ],
+		"colors": [ "Brown" ],
 		"posStat": "Speed",
 		"negStat": "Defense"
 	},
@@ -331,13 +331,13 @@
 	},
 	{
 		"name": "Mankey",
-		"colors": [ "Orange" ],
+		"colors": [ "Brown" ],
 		"posStat": "HP",
 		"negStat": "Defense"
 	},
 	{
 		"name": "Primeape",
-		"colors": [ "Orange" ],
+		"colors": [ "Brown" ],
 		"posStat": "HP",
 		"negStat": "Sp. Attack"
 	},
@@ -367,7 +367,7 @@
 	},
 	{
 		"name": "Poliwrath",
-		"colors": [ "Blue", "Orange" ],
+		"colors": [ "Blue", "Brown" ],
 		"posStat": "Sp. Defense",
 		"negStat": "Sp. Attack"
 	},
@@ -391,19 +391,19 @@
 	},
 	{
 		"name": "Machop",
-		"colors": [ "Orange" ],
+		"colors": [ "Brown" ],
 		"posStat": "Attack",
 		"negStat": "Speed"
 	},
 	{
 		"name": "Machoke",
-		"colors": [ "Orange" ],
+		"colors": [ "Brown" ],
 		"posStat": "Attack",
 		"negStat": "Sp. Defense"
 	},
 	{
 		"name": "Machamp",
-		"colors": [ "Orange" ],
+		"colors": [ "Brown" ],
 		"posStat": "Attack",
 		"negStat": "Sp. Attack"
 	},
@@ -439,19 +439,19 @@
 	},
 	{
 		"name": "Geodude",
-		"colors": [ "Orange" ],
+		"colors": [ "Brown" ],
 		"posStat": "Defense",
 		"negStat": "Sp. Defense"
 	},
 	{
 		"name": "Graveler",
-		"colors": [ "Orange" ],
+		"colors": [ "Brown" ],
 		"posStat": "Defense",
 		"negStat": "Critical-Hit Rate"
 	},
 	{
 		"name": "Golem",
-		"colors": [ "Orange" ],
+		"colors": [ "Brown" ],
 		"posStat": "Defense",
 		"negStat": "Sp. Attack"
 	},
@@ -565,7 +565,7 @@
 	},
 	{
 		"name": "Onix",
-		"colors": [ "Orange" ],
+		"colors": [ "Brown" ],
 		"posStat": "Defense",
 		"negStat": "HP"
 	},
@@ -619,25 +619,25 @@
 	},
 	{
 		"name": "Cubone",
-		"colors": [ "Orange" ],
+		"colors": [ "Brown" ],
 		"posStat": "Attack",
 		"negStat": "HP"
 	},
 	{
 		"name": "Marowak",
-		"colors": [ "Orange" ],
+		"colors": [ "Brown" ],
 		"posStat": "Attack",
 		"negStat": "Sp. Attack"
 	},
 	{
 		"name": "Hitmonlee",
-		"colors": [ "Orange" ],
+		"colors": [ "Brown" ],
 		"posStat": "Sp. Defense",
 		"negStat": "Sp. Attack"
 	},
 	{
 		"name": "Hitmonchan",
-		"colors": [ "Orange" ],
+		"colors": [ "Brown" ],
 		"posStat": "Sp. Defense",
 		"negStat": "Sp. Attack"
 	},
@@ -661,13 +661,13 @@
 	},
 	{
 		"name": "Rhyhorn",
-		"colors": [ "Orange" ],
+		"colors": [ "Brown" ],
 		"posStat": "HP",
 		"negStat": "Speed"
 	},
 	{
 		"name": "Rhydon",
-		"colors": [ "Orange" ],
+		"colors": [ "Brown" ],
 		"posStat": "HP",
 		"negStat": "Sp. Defense"
 	},
@@ -835,19 +835,19 @@
 	},
 	{
 		"name": "Kabuto",
-		"colors": [ "Orange" ],
+		"colors": [ "Brown" ],
 		"posStat": "Critical-Hit Rate",
 		"negStat": "HP"
 	},
 	{
 		"name": "Kabutops",
-		"colors": [ "Orange", "White" ],
+		"colors": [ "Brown", "White" ],
 		"posStat": "Critical-Hit Rate",
 		"negStat": "Sp. Attack"
 	},
 	{
 		"name": "Aerodactyl",
-		"colors": [ "Orange", "White" ],
+		"colors": [ "Brown", "White" ],
 		"posStat": "Speed",
 		"negStat": "Defense"
 	},
