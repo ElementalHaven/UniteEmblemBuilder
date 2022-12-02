@@ -904,5 +904,305 @@
 		"colors": [ "Purple" ],
 		"posStat": "Cooldown Reduction",
 		"negStat": "HP"
+	},
+	{
+		"name": "Chikorita",
+		"colors": [ "Green" ],
+		"posStat": "Defense",
+		"negStat": "HP"
+	},
+	{
+		"name": "Bayleef",
+		"colors": [ "Green" ],
+		"posStat": "Defense",
+		"negStat": "Speed"
+	},
+	{
+		"name": "Meganium",
+		"colors": [ "Green" ],
+		"posStat": "Defense",
+		"negStat": "Attack"
+	},
+	{
+		"name": "Cyndaquil",
+		"colors": [ "Red" ],
+		"posStat": "Sp. Attack",
+		"negStat": "HP"
+	},
+	{
+		"name": "Quilava",
+		"colors": [ "Red" ],
+		"posStat": "Sp. Attack",
+		"negStat": "Defense"
+	},
+	{
+		"name": "Typhlosion",
+		"colors": [ "Red" ],
+		"posStat": "Sp. Attack",
+		"negStat": "Sp. Defense"
+	},
+	{
+		"name": "Totodile",
+		"colors": [ "Blue" ],
+		"posStat": "Defense",
+		"negStat": "HP"
+	},
+	{
+		"name": "Croconaw",
+		"colors": [ "Blue" ],
+		"posStat": "Defense",
+		"negStat": "Sp. Defense"
+	},
+	{
+		"name": "Feraligatr",
+		"colors": [ "Blue" ],
+		"posStat": "Defense",
+		"negStat": "Sp. Attack"
+	},
+	{
+		"name": "Sentret",
+		"colors": [ "White" ],
+		"posStat": "Critical-Hit Rate",
+		"negStat": "Sp. Defense"
+	},
+	{
+		"name": "Furret",
+		"colors": [ "White" ],
+		"posStat": "Critical-Hit Rate",
+		"negStat": "Sp. Attack"
+	},
+	{
+		"name": "Hoothoot",
+		"colors": [ "White" ],
+		"posStat": "Critical-Hit Rate",
+		"negStat": "Attack"
+	},
+	{
+		"name": "Noctowl",
+		"colors": [ "White" ],
+		"posStat": "Critical-Hit Rate",
+		"negStat": "Defense"
+	},
+	{
+		"name": "Ledyba",
+		"colors": [ "Green" ],
+		"posStat": "Sp. Defense",
+		"negStat": "Critical-Hit Rate"
+	},
+	{
+		"name": "Ledian",
+		"colors": [ "Green" ],
+		"posStat": "Sp. Defense",
+		"negStat": "Attack"
+	},
+	{
+		"name": "Spinarak",
+		"colors": [ "Green" ],
+		"posStat": "Attack",
+		"negStat": "Critical-Hit Rate"
+	},
+	{
+		"name": "Ariados",
+		"colors": [ "Black" ],
+		"posStat": "Attack",
+		"negStat": "Sp. Attack"
+	},
+	{
+		"name": "Crobat",
+		"colors": [ "Black" ],
+		"posStat": "Speed",
+		"negStat": "Sp. Attack"
+	},
+	{
+		"name": "Chinchou",
+		"colors": [ "Yellow" ],
+		"posStat": "HP",
+		"negStat": "Defense"
+	},
+	{
+		"name": "Lanturn",
+		"colors": [ "Yellow" ],
+		"posStat": "HP",
+		"negStat": "Attack"
+	},
+	{
+		"name": "Pichu",
+		"colors": [ "Yellow" ],
+		"posStat": "Speed",
+		"negStat": "Attack"
+	},
+	{
+		"name": "Cleffa",
+		"colors": [ "Pink" ],
+		"posStat": "HP",
+		"negStat": "Defense"
+	},
+	{
+		"name": "Igglybuff",
+		"colors": [ "Pink" ],
+		"posStat": "HP",
+		"negStat": "Defense"
+	},
+	{
+		"name": "Togepi",
+		"colors": [ "Pink" ],
+		"posStat": "Sp. Defense",
+		"negStat": "Speed"
+	},
+	{
+		"name": "Togetic",
+		"colors": [ "Pink", "White" ],
+		"posStat": "Sp. Defense",
+		"negStat": "HP"
+	},
+	{
+		"name": "Natu",
+		"colors": [ "Purple" ],
+		"posStat": "Speed",
+		"negStat": "Critical-Hit Rate"
+	},
+	{
+		"name": "Xatu",
+		"colors": [ "Purple", "White" ],
+		"posStat": "Speed",
+		"negStat": "Defense"
+	},
+	{
+		"name": "Mareep",
+		"colors": [ "Yellow" ],
+		"posStat": "Sp. Attack",
+		"negStat": "Defense"
+	},
+	{
+		"name": "Flaaffy",
+		"colors": [ "Yellow" ],
+		"posStat": "Sp. Attack",
+		"negStat": "Critical-Hit Rate"
+	},
+	{
+		"name": "Ampharos",
+		"colors": [ "Yellow" ],
+		"posStat": "Sp. Attack",
+		"negStat": "Attack"
+	},
+	{
+		"name": "Bellossom",
+		"colors": [ "Green" ],
+		"posStat": "Sp. Attack",
+		"negStat": "HP"
+	},
+	{
+		"name": "Marill",
+		"colors": [ "Pink" ],
+		"posStat": "HP",
+		"negStat": "Speed"
+	},
+	{
+		"name": "Azumarill",
+		"colors": [ "Blue", "Pink" ],
+		"posStat": "HP",
+		"negStat": "Speed"
+	},
+	{
+		"name": "Sudowoodo",
+		"colors": [ "Brown" ],
+		"posStat": "Defense",
+		"negStat": "Critical-Hit Rate"
+	},
+	{
+		"name": "Politoed",
+		"colors": [ "Blue" ],
+		"posStat": "Sp. Defense",
+		"negStat": "Attack"
+	},
+	{
+		"name": "Hoppip",
+		"colors": [ "Green" ],
+		"posStat": "Speed",
+		"negStat": "HP"
+	},
+	{
+		"name": "Skiploom",
+		"colors": [ "Green" ],
+		"posStat": "Speed",
+		"negStat": "Sp. Attack"
+	},
+	{
+		"name": "Jumpluff",
+		"colors": [ "Green", "White" ],
+		"posStat": "Speed",
+		"negStat": "Attack"
+	},
+	{
+		"name": "Aipom",
+		"colors": [ "White" ],
+		"posStat": "Critical-Hit Rate",
+		"negStat": "Defense"
+	},
+	{
+		"name": "Sunkern",
+		"colors": [ "Green" ],
+		"posStat": "HP",
+		"negStat": "Defense"
+	},
+	{
+		"name": "Sunflora",
+		"colors": [ "Green" ],
+		"posStat": "HP",
+		"negStat": "Sp. Defense"
+	},
+	{
+		"name": "Yanma",
+		"colors": [ "Green" ],
+		"posStat": "Speed",
+		"negStat": "Defense"
+	},
+	{
+		"name": "Wooper",
+		"colors": [ "Blue" ],
+		"posStat": "HP",
+		"negStat": "Sp. Attack"
+	},
+	{
+		"name": "Quagsire",
+		"colors": [ "Blue", "Brown" ],
+		"posStat": "HP",
+		"negStat": "Sp. Defense"
+	},
+	{
+		"name": "Espeon",
+		"colors": [ "Purple" ],
+		"posStat": "Sp. Attack",
+		"negStat": "Defense"
+	},
+	{
+		"name": "Umbreon",
+		"colors": [ "Black" ],
+		"posStat": "Sp. Defense",
+		"negStat": "Sp. Attack"
+	},
+	{
+		"name": "Murkrow",
+		"colors": [ "Black" ],
+		"posStat": "Sp. Attack",
+		"negStat": "Sp. Defense"
+	},
+	{
+		"name": "Slowking",
+		"colors": [ "Blue", "Purple" ],
+		"posStat": "Sp. Defense",
+		"negStat": "Speed"
+	},
+	{
+		"name": "Misdreavus",
+		"colors": [ "Purple" ],
+		"posStat": "Sp. Defense",
+		"negStat": "HP"
+	},
+	{
+		"name": "Unown",
+		"colors": [ "Purple" ],
+		"posStat": "Attack",
+		"negStat": "HP"
 	}
 ]
