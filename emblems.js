@@ -97,6 +97,7 @@ class B64Convert {
 }
 var pkmnList;
 const pkmnByName = new Map();
+const pkmnById = new Map();
 const combos = [
     {
         color: "Green",
@@ -157,6 +158,12 @@ const combos = [
         startCount: 3,
         stat: "Unite Move Cooldown Reduction",
         amount: 1
+    },
+    {
+        color: "Gray",
+        startCount: 3,
+        stat: "Damage Reduction",
+        amount: 3
     }
 ];
 var activeEmblems;
@@ -196,7 +203,7 @@ function getComboEffect(color, count) {
             stat: combo.stat,
             amount: combo.amount,
             good: true,
-            percent: true
+            percent: color != "Gray"
         };
         if (count >= minCount + 2)
             effect.amount *= 2;
@@ -428,11 +435,17 @@ function convertLegactyShareCode(code) {
     }
     return createShareCodeImpl(values, bits);
 }
+function getPokemonId(name) {
+    let pkmn = pkmnByName.get(name);
+    if (pkmn.id)
+        return pkmn.id;
+    return pkmnList.indexOf(pkmn) + 1;
+}
 function createShareCode() {
     let values = [];
     let bits = MIN_MON_BITS;
     for (let emblem of activeEmblems) {
-        const monId = pkmnList.indexOf(pkmnByName.get(emblem.pokemonName)) + 1;
+        const monId = getPokemonId(emblem.pokemonName);
         while (monId > (1 << bits) - 1)
             bits++;
         values.push(monId | (emblem.grade << 10) | (emblem.count << 12));
@@ -464,7 +477,7 @@ function parseShareCode(code) {
         let monId = convert.readBits(bitsPerMon);
         if (!monId)
             break;
-        let name = pkmnList[monId - 1].name;
+        let name = pkmnById.get(monId).name;
         if (rows)
             rows += '\n';
         rows += tierNames[tier] + ' ' + name;
@@ -689,8 +702,11 @@ function setup() {
         navigator.clipboard.writeText(freeInp.value);
     });
     fetch("emblems.json").then(r => r.json()).then(json => {
+        var _a;
         pkmnList = json;
-        for (let pkmn of pkmnList) {
+        for (let i = 0; i < pkmnList.length; i++) {
+            let pkmn = pkmnList[i];
+            pkmnById.set((_a = pkmn.id) !== null && _a !== void 0 ? _a : i + 1, pkmn);
             pkmnByName.set(pkmn.name, pkmn);
         }
         calcIdenticalStats();

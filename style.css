@@ -110,6 +110,9 @@ td.Yellow {
 td.White {
 	background: rgba(255, 255, 255, 0.25);
 }
+td.Gray {
+	background: rgba(127, 127, 127, 0.25);
+}
 td.Black {
 	background: rgba(0, 0, 0, 0.25);
 }

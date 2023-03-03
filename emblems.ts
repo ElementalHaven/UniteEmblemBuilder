@@ -5,6 +5,7 @@ class Pokemon {
 	posStat: string;
 	negStat: string;
 	colors: string[] = [];
+	id?: number;
 	sameStats?: string[];
 }
 
@@ -127,6 +128,7 @@ class B64Convert {
 
 var pkmnList: Pokemon[];
 const pkmnByName: Map<string, Pokemon> = new Map();
+const pkmnById: Map<number, Pokemon> = new Map();
 const combos: ComboEffect[] = [
 	{
 		color: "Green",
@@ -187,6 +189,12 @@ const combos: ComboEffect[] = [
 		startCount: 3,
 		stat: "Unite Move Cooldown Reduction",
 		amount: 1
+	},
+	{
+		color: "Gray",
+		startCount: 3,
+		stat: "Damage Reduction",
+		amount: 3
 	}
 ]
 var activeEmblems: Emblem[];
@@ -235,7 +243,8 @@ function getComboEffect(color: string, count: number): ResultingEffect {
 			stat: combo.stat,
 			amount: combo.amount,
 			good: true,
-			percent: true
+			// maybe gray is a percent. I'd have to see it in game or a picture
+			percent: color != "Gray"
 		}
 		if(count >= minCount + 2) effect.amount *= 2;
 		if(count >= minCount + 4) effect.amount *= 2;
@@ -514,11 +523,17 @@ function convertLegactyShareCode(code: string): string {
 	return createShareCodeImpl(values, bits);
 }
 
+function getPokemonId(name: string): number {
+	let pkmn = pkmnByName.get(name);
+	if(pkmn.id) return pkmn.id;
+	return pkmnList.indexOf(pkmn) + 1;
+}
+
 function createShareCode(): string {
 	let values: number[] = [];
 	let bits = MIN_MON_BITS;
 	for(let emblem of activeEmblems) {
-		const monId = pkmnList.indexOf(pkmnByName.get(emblem.pokemonName)) + 1;
+		const monId = getPokemonId(emblem.pokemonName);
 		while(monId > (1 << bits) - 1) bits++;
 		values.push(monId | (emblem.grade << 10) | (emblem.count << 12));
 	}
@@ -558,7 +573,7 @@ function parseShareCode(code: string): string {
 		let monId = convert.readBits(bitsPerMon);
 		if(!monId) break;
 
-		let name = pkmnList[monId - 1].name;
+		let name = pkmnById.get(monId).name;
 		if(rows) rows += '\n';
 		rows += tierNames[tier] + ' ' + name;
 	}
@@ -829,7 +844,9 @@ function setup(): void {
 
 	fetch("emblems.json").then(r => r.json()).then(json => {
 		pkmnList = json;
-		for(let pkmn of pkmnList) {
+		for(let i = 0; i < pkmnList.length; i++) {
+			let pkmn = pkmnList[i];
+			pkmnById.set(pkmn.id ?? i + 1, pkmn);
 			pkmnByName.set(pkmn.name, pkmn);
 		}
 

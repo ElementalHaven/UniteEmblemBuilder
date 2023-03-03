@@ -1204,5 +1204,312 @@
 		"colors": [ "Purple" ],
 		"posStat": "Attack",
 		"negStat": "HP"
+	},
+	{
+		"name": "Wobbuffet",
+		"colors": [ "Purple" ],
+		"posStat": "HP",
+		"negStat": "Critical-Hit Rate"
+	},
+	{
+		"name": "Girafarig",
+		"colors": [ "Purple" ],
+		"posStat": "HP",
+		"negStat": "Sp. Defense"
+	},
+	{
+		"name": "Pineco",
+		"colors": [ "Green" ],
+		"posStat": "Defense",
+		"negStat": "HP"
+	},
+	{
+		"name": "Forretress",
+		"colors": [ "Gray" ],
+		"posStat": "Defense",
+		"negStat": "Sp. Attack"
+	},
+	{
+		"name": "Dunsparce",
+		"colors": [ "White" ],
+		"posStat": "HP",
+		"negStat": "Sp. Attack"
+	},
+	{
+		"name": "Gligar",
+		"colors": [ "Brown" ],
+		"posStat": "Defense",
+		"negStat": "Sp. Attack"
+	},
+	{
+		"name": "Steelix",
+		"colors": [ "Gray", "Brown" ],
+		"posStat": "Defense",
+		"negStat": "Sp. Defense"
+	},
+	{
+		"name": "Snubbull",
+		"colors": [ "Pink" ],
+		"posStat": "Attack",
+		"negStat": "HP"
+	},
+	{
+		"name": "Granbull",
+		"colors": [ "Pink" ],
+		"posStat": "Attack",
+		"negStat": "Sp. Defense"
+	},
+	{
+		"name": "Qwilfish",
+		"colors": [ "Black" ],
+		"posStat": "HP",
+		"negStat": "Sp. Defense"
+	},
+	{
+		"name": "Scizor",
+		"colors": [ "Gray" ],
+		"posStat": "Critical-Hit Rate",
+		"negStat": "Sp. Defense"
+	},
+	{
+		"name": "Shuckle",
+		"colors": [ "Brown" ],
+		"posStat": "Sp. Defense",
+		"negStat": "HP"
+	},
+	{
+		"name": "Heracross",
+		"colors": [ "Brown" ],
+		"posStat": "Attack",
+		"negStat": "HP"
+	},
+	{
+		"name": "Sneasel",
+		"colors": [ "Black" ],
+		"posStat": "Critical-Hit Rate",
+		"negStat": "HP"
+	},
+	{
+		"name": "Teddiursa",
+		"colors": [ "White" ],
+		"posStat": "Attack",
+		"negStat": "HP"
+	},
+	{
+		"name": "Ursaring",
+		"colors": [ "White" ],
+		"posStat": "Attack",
+		"negStat": "Speed"
+	},
+	{
+		"name": "Slugma",
+		"colors": [ "Red" ],
+		"posStat": "Defense",
+		"negStat": "Attack"
+	},
+	{
+		"name": "Magcargo",
+		"colors": [ "Red" ],
+		"posStat": "Defense",
+		"negStat": "HP"
+	},
+	{
+		"name": "Swinub",
+		"colors": [ "Blue" ],
+		"posStat": "HP",
+		"negStat": "Sp. Defense"
+	},
+	{
+		"name": "Piloswine",
+		"colors": [ "Blue", "Brown" ],
+		"posStat": "HP",
+		"negStat": "Critical-Hit Rate"
+	},
+	{
+		"name": "Corsola",
+		"colors": [ "Blue" ],
+		"posStat": "Sp. Defense",
+		"negStat": "Attack"
+	},
+	{
+		"name": "Remoraid",
+		"colors": [ "Blue" ],
+		"posStat": "Sp. Attack",
+		"negStat": "HP"
+	},
+	{
+		"name": "Octillery",
+		"colors": [ "Blue" ],
+		"posStat": "Sp. Attack",
+		"negStat": "Defense"
+	},
+	{
+		"name": "Delibird",
+		"colors": [ "White", "Blue" ],
+		"posStat": "Sp. Attack",
+		"negStat": "HP"
+	},
+	{
+		"name": "Mantine",
+		"colors": [ "White", "Blue" ],
+		"posStat": "Sp. Defense",
+		"negStat": "Attack"
+	},
+	{
+		"name": "Skarmory",
+		"colors": [ "Gray" ],
+		"posStat": "Attack",
+		"negStat": "HP"
+	},
+	{
+		"name": "Houndour",
+		"colors": [ "Red" ],
+		"posStat": "Attack",
+		"negStat": "HP"
+	},
+	{
+		"name": "Houndoom",
+		"colors": [ "Black", "Red" ],
+		"posStat": "Attack",
+		"negStat": "Defense"
+	},
+	{
+		"name": "Kingdra",
+		"colors": [ "Blue", "Navy" ],
+		"posStat": "Sp. Attack",
+		"negStat": "Speed"
+	},
+	{
+		"name": "Phanpy",
+		"colors": [ "Brown" ],
+		"posStat": "Attack",
+		"negStat": "HP"
+	},
+	{
+		"name": "Donphan",
+		"colors": [ "Brown" ],
+		"posStat": "Attack",
+		"negStat": "Sp. Defense"
+	},
+	{
+		"name": "Porygon2",
+		"colors": [ "White" ],
+		"posStat": "Sp. Attack",
+		"negStat": "Attack"
+	},
+	{
+		"name": "Stantler",
+		"colors": [ "White" ],
+		"posStat": "Sp. Attack",
+		"negStat": "Sp. Defense"
+	},
+	{
+		"name": "Smeargle",
+		"colors": [ "White" ],
+		"posStat": "HP",
+		"negStat": "Sp. Attack"
+	},
+	{
+		"name": "Tyrogue",
+		"colors": [ "Brown" ],
+		"posStat": "Sp. Defense",
+		"negStat": "HP"
+	},
+	{
+		"name": "Hitmontop",
+		"colors": [ "Brown" ],
+		"posStat": "Sp. Defense",
+		"negStat": "Sp. Attack"
+	},
+	{
+		"name": "Smoochum",
+		"colors": [ "Purple" ],
+		"posStat": "Sp. Attack",
+		"negStat": "HP"
+	},
+	{
+		"name": "Elekid",
+		"colors": [ "Yellow" ],
+		"posStat": "Attack",
+		"negStat": "HP"
+	},
+	{
+		"name": "Magby",
+		"colors": [ "Red" ],
+		"posStat": "Attack",
+		"negStat": "Defense"
+	},
+	{
+		"name": "Miltank",
+		"colors": [ "White" ],
+		"posStat": "Defense",
+		"negStat": "Sp. Attack"
+	},
+	{
+		"name": "Blissey",
+		"colors": [ "White" ],
+		"posStat": "HP",
+		"negStat": "Attack"
+	},
+	{
+		"name": "Raikou",
+		"colors": [ "Yellow" ],
+		"posStat": "HP",
+		"negStat": "Attack"
+	},
+	{
+		"name": "Entei",
+		"colors": [ "Red" ],
+		"posStat": "HP",
+		"negStat": "Sp. Attack"
+	},
+	{
+		"name": "Suicune",
+		"colors": [ "Blue" ],
+		"posStat": "HP",
+		"negStat": "Attack"
+	},
+	{
+		"name": "Larvitar",
+		"colors": [ "Brown" ],
+		"posStat": "HP",
+		"negStat": "Sp. Defense"
+	},
+	{
+		"name": "Pupitar",
+		"colors": [ "Brown" ],
+		"posStat": "HP",
+		"negStat": "Speed"
+	},
+	{
+		"name": "Tyranitar",
+		"colors": [ "Brown", "Black" ],
+		"posStat": "HP",
+		"negStat": "Critical-Hit Rate"
+	},
+	{
+		"name": "Lugia",
+		"colors": [ "Purple", "White" ],
+		"posStat": "Sp. Defense",
+		"negStat": "Attack"
+	},
+	{
+		"name": "Ho-Oh",
+		"colors": [ "Red", "White" ],
+		"posStat": "Sp. Defense",
+		"negStat": "Sp. Attack"
+	},
+	{
+		"name": "Celebi",
+		"colors": [ "Purple", "Green" ],
+		"posStat": "Cooldown Reduction",
+		"negStat": "HP"
+	},
+	{
+		"name": "Zacian",
+		"colors": [ "Gray", "Pink" ],
+		"posStat": "Attack",
+		"negStat": "Sp. Attack",
+		"id": 888
 	}
 ]
